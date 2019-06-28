@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+.white{
+    color: #fff;
+}
+.light-text {
+    font-family: 'Montserrat Hairline', Arial;
+    font-weight: 200;
+    font-size: 3em;
+}
+.relative {
+    position: relative;
+}
+.first-view {
+    height: 100vh;
+    background-image: url('../img/3130_purple_abstract.png');
+    background-size: cover;
+}
+
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.iphone-6-mockup{
+    display: block;
+    position: absolute;
+    bottom: -35%;
+}
+.services-logo {
+    display: block;
+    position: relative;
+    object-fit: contain;
+    /* margin-bottom: 0; */
+}
