@@ -9,6 +9,7 @@
 
     <title>Immutable first project</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/main.css">
@@ -16,56 +17,145 @@
 </head>
 
 <body>
-    <section class="first-view">
-        <nav class="navbar">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Prototype</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon "></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home
-                                <span class="sr-only">(current)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <div class="container-fluid .align-items-baseline h-100 relative">
-
-            <div class="row justify-content-center align-content-center h-50">
-                <div class=" col col-lg-5 align-self-center text-center">
-                    <h1 class="light-text white">Lorem ipsum dolor sit amet, consectetur</h1>
-                </div>
-                <img class="iphone-6-mockup col-lg-5" src="./img/iphone_6_mockup.png" alt="iphone">    
-            </div>
-         
-
-            <div class="row justify-content-center relative h-50">
-
-                <img class="services-logo col col-lg-2 col-md-2 offset-md-0" src="./img/googleplay.png" alt="">
-            
-                <img class="services-logo col col-lg-2 col-md-3 offset-md-3" src="./img/available-on-the-app-store-badge.png" alt="">
-
+<section class="first-view">
+    <nav class="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Prototype</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
             </div>
         </div>
+    </nav>
+
+    <div class="container-fluid .align-items-baseline h-100 relative">
+
+        <div class="row justify-content-center align-content-center h-50">
+            <div class=" col col-lg-5 align-self-center text-center">
+                <h1 class="light-text white">Lorem ipsum dolor sit amet, consectetur</h1>
+            </div>
+            <img class="iphone-6-mockup col-lg-5" src="./img/iphone_6_mockup.png" alt="iphone">
+        </div>
+
+
+        <div class="row justify-content-center relative h-50">
+
+            <img class="services-logo col col-lg-2 col-md-2 offset-md-0" src="./img/googleplay.png" alt="">
+
+            <img class="services-logo col col-lg-2 col-md-3 offset-md-3"
+                 src="./img/available-on-the-app-store-badge.png" alt="">
+
+        </div>
+    </div>
+</section>
+<main class="container-fluid">
+    <div class="container">
+        <section class="app-features">
+            <div class="row">
+                <div class="col-sm d-flex flex-column align-items-center">
+                    <img src="./img/cloud.png" class="app-feature__item__icon" alt="cloud icon">
+                    <h3 class="app-feature__item__header open-sans">
+                        Cloud sync
+                    </h3>
+                    <p class="app-feature__item__description text-center open-sans">
+                        Etiam rhoncus, metus vitae volutpat porta, risus dolor mollis nunc, sit amet maximus nunc
+                        turpis vitae elit. Cras ac efficitur massa.
+                    </p>
+                </div>
+                <div class="col-sm d-flex flex-column align-items-center app-feature__item-center">
+                    <img src="./img/bell.png" class="app-feature__item__icon" alt="cloud icon">
+                    <h3 class="app-feature__item__header open-sans">
+                        Notifications
+                    </h3>
+                    <p class="app-feature__item__description text-center open-sans">
+                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                        Quisque augue odio, congue id turpis suscipit, mattis lacinia nulla.
+                    </p>
+                </div>
+                <div class="col-sm d-flex flex-column align-items-center">
+                    <img src="./img/diamount.png" class="app-feature__item__icon" alt="cloud icon">
+                    <h3 class="app-feature__item__header open-sans">
+                        Beautiful design
+                    </h3>
+                    <p class="app-feature__item__description text-center open-sans">
+                        Vivamus vitae lectus sem. Vestibulum nec consequat lacus, nec fringilla urna.
+                        Phasellus non bibendum leo. Mauris suscipit nisi ac commodo bibendum.
+                    </p>
+                </div>
+            </div>
         </section>
-    
-        <script src="vendor/jquery/jquery.slim.min.js"></script>
-        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    </body>
+        <section class="app-works">
+            <div class="row">
+                <div class="col-md app-works__image__wrap d-flex justify-content-center">
+                    <img src="./img/hand-template.png" class="app-works__image" alt="iphone image with bridge picture">
+                </div>
+                <div class="col-md d-flex flex-column align-items-center">
+                    <h2 class="app-works__header open-sans">
+                        How our app works
+                    </h2>
+                    <p class="app-works__description open-sans">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip.
+                    </p>
+                    <div class="app-works__item">
+                        <div class="row">
+                            <div class="col-2 d-flex align-items-center mr-1">
+                                <img src="./img/create-icon.png" alt="plus in circle">
+                            </div>
+                            <div class="col-9">
+                                <h4 class="app-works__item__header open-sans">
+                                    Create
+                                </h4>
+                                <p class="app-works__item__description open-sans">
+                                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+                                    Curae; Quisque augue odio, congue id turpis suscipit, mattis lacinia nulla.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="app-works__item">
+                        <div class="row">
+                            <div class="col-2 d-flex align-items-center mr-1">
+                                <img src="./img/share-icon.png" alt="share icon">
+                            </div>
+                            <div class="col-9">
+                                <h4 class="app-works__item__header open-sans">
+                                    Share
+                                </h4>
+                                <p class="app-works__item__description open-sans">
+                                    Vivamus vitae lectus sem. Vestibulum nec consequat lacus, nec fringilla urna.
+                                    Phasellus non bibendum leo. Mauris suscipit nisi ac commodo bibendum.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+
+<script src="vendor/jquery/jquery.slim.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
