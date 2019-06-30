@@ -163,7 +163,7 @@
                 <div class="carousel-inner d-flex align-content-center">
                   <div class="carousel-item active">
                     <img class="d-block w-100" src="./img/tab1.jpg" alt="First slide">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption d-md-block h-100">
                         <div class="review">
                             <img class="review-photo d-block" src="./img/128.jpg" alt="">
                             <p> Donec finibus mattis metus, eget finibus tortor porta in. Ut id imperdiet nibh. Morbi pretium fermentum lorem, quis mattis velit dictum et. </p>
@@ -172,7 +172,7 @@
                   </div>
                   <div class="carousel-item">
                     <img class="d-block w-100" src="./img/tab2.jpg" alt="Second slide">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption d-md-block h-100">
                             <div class="review">
                                 <img class="review-photo d-block" src="./img/128.jpg" alt="">
                                 <p> Donec finibus mattis metus, eget finibus tortor porta in. Ut id imperdiet nibh. Morbi pretium fermentum lorem, quis mattis velit dictum et. </p>
@@ -181,9 +181,9 @@
                   </div>
                   <div class="carousel-item">
                     <img class="d-block w-100" src="./img/tab3.jpg" alt="Third slide">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption d-md-block h-100">
                             <div class="review">
-                                <img class="review-photo d-block" src="./img/128.jpg" alt="">
+                                <img class="review-photo d-block " src="./img/128.jpg" alt="">
                                 <p> Donec finibus mattis metus, eget finibus tortor porta in. Ut id imperdiet nibh. Morbi pretium fermentum lorem, quis mattis velit dictum et. </p>
                             </div>
                         </div>
@@ -201,13 +201,43 @@
         </section>
         <section class="wrote-about-us">
             <h1 class="text-center w-100 text-dark">Wrote about us</h1>
-            <div class="row d-flex justify-content-between container-fluid flex-wrap">
-                <img class="wrote-about-us_img" src="./img/Forbes_logo.svg.png" alt="">
-                <img class="wrote-about-us_img" src="./img/the-new-york-times-logo-vert.png" alt="">
-                <img class="wrote-about-us_img" src="./img/2000px-The_Wall_Street_Journal_Logo.svg.png" alt="">
-                <img class="wrote-about-us_img" src="./img/Mashable-Logo.png" alt="">
+            <div class="container-fluid">
+                <div class="row d-flex justify-content-around mr-1 ml-1 line-after">
+                    <img class="d-block col-md-2 col-sm-6 col-xl-2 col-lg-2 col-6 wrote-about-us_img" src="./img/Forbes_logo.svg.png" alt="">
+                    <img class="d-block col-md-2 col-sm-6 col-xl-2 col-lg-2 col-6 wrote-about-us_img" src="./img/the-new-york-times-logo-vert.png" alt="">
+                    <img class="d-block col-md-2 col-sm-6 col-xl-2 col-lg-2 col-6 wrote-about-us_img" src="./img/2000px-The_Wall_Street_Journal_Logo.svg.png" alt="">
+                    <img class="d-block col-md-2 col-sm-6 col-xl-2 col-lg-2 col-6 wrote-about-us_img" src="./img/Mashable-Logo.png" alt="">
+                </div>
             </div>
         </section>
+        <footer class="container-fluid">
+            <div class="row justify-content-around ">
+                <div class="col-md-4 col-sm-12 col-12">
+                    <h3 class="title-contact">Contact</h3>
+                    <ul class="unmarked">
+                        <li class="location-contact">1600 Amphitheatre Pkwy, Mountain View, United States</li>
+                        <li class="phone-contact">+1 650-253-0000</li>
+                        <li class="mail-contact">google@google.com</li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-sm-12 col-12 d-flex flex-column justify-content-center">
+                    <div class="social-footer">
+                        <a href="#"><img src="./img/iconmonstr-facebook-3-icon-48.png" alt=""></a>
+                        <a href="#" class="social-youtube"><img src="./img/iconmonstr-youtube-3-icon-48.png" alt=""></a>
+                    </div>
+                    <div class="social-footer">
+                        <a href="#"><img src="./img/iconmonstr-twitter-3-icon-48.png" alt=""></a>
+                        <a href="#"><img src="./img/iconmonstr-google-plus-3-icon-48.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 col-12">
+                    <h3>Newsletter</h3>
+                    <input class="email-form" type="text" placeholder="Your email">
+                    <input class="subscribe-button text-light" type="submit" value="Subscribe">
+                </div>
+                <div class="col-12 text-center mb-1">Copyright © 2015 Name | Design by Jakub Chynoradský</div>
+            </div>
+        </footer>
     </main>
     
         <script src="vendor/jquery/jquery.slim.min.js"></script>
