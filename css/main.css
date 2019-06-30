@@ -155,23 +155,39 @@ main {
     font-weight: 400;
 }
 
+.wrote-about-us {
+    padding: 50px 0 0 0;    
+}
+.wrote-about-us_img {
+    display: block;
+    object-fit: contain;
+    width: 20%;
+    margin: 50px 0 50px 0;
+}
+
 @media screen and (max-width: 992px){
     .container {
         max-width: 100%;
     }
-
     .app-works__image__wrap {
         padding: 0 30px 30px;
     }
+    .wrote-about-us_img {
+        width: 40%;
+    }
 }
-
 
 @media screen and (max-width: 575px) {
     .app-features {
         padding-top: 15rem;
     }
-
     .app-feature__item-center {
         margin: 0;
+    }
+    .wrote-about-us_img {
+        width: 90%;
+    }
+    .wrote-about-us {
+        justify-content: center;
     }
 }
