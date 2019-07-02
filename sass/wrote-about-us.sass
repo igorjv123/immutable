@@ -1,5 +1,3 @@
-@import './variables.sass'
-@import './mixins.sass'
 .wrote-about-us
     &__images-container
         display: flex
@@ -13,10 +11,13 @@
         width: 20%
         object-fit: contain
         margin: 30px 0
-        @include small-screen
-            width: 80%
-        @include middle-screen
-            width: 40%
 
     &__title
         text-align: center
+@media screen and (max-width: 992px)
+    .wrote-about-us__img
+        width: 40% 
+
+@media screen and (max-width: 575px) 
+    .wrote-about-us__img 
+        width: 80%

@@ -13,8 +13,7 @@
     <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/wroteAboutUs.css">
-
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -209,30 +208,32 @@
                 <img class="wrote-about-us__img" src="./img/Mashable-Logo.png" alt="">
             </div>
         </section>
-        <footer class="container-fluid">
-            <div class="row justify-content-around ">
-                <div class="col-md-4 col-sm-12 col-12">
-                    <h3 class="title-contact">Contact</h3>
-                    <ul class="unmarked">
-                        <li class="location-contact">1600 Amphitheatre Pkwy, Mountain View, United States</li>
-                        <li class="phone-contact">+1 650-253-0000</li>
-                        <li class="mail-contact">google@google.com</li>
-                    </ul>
+        <footer class="footer">
+            <div class="footer__item footer__contats">
+                <h3 class="footer__contacts-title">Contact</h3>
+                <div class="footer__contacts-items">
+                    <p class="footer__contacts-item">1600 Amphitheatre Pkwy, Mountain View, United States</p>
+                    <p class="footer__contacts-item">+1 650-253-0000</p>
+                    <p class="footer__contacts-item">google@google.com</p>
                 </div>
-                <div class="col-md-2 col-sm-12 col-12 d-flex flex-column justify-content-center">
-                    <div class="social-footer">
-                        <a href="#"><img src="./img/iconmonstr-facebook-3-icon-48.png" alt=""></a>
-                        <a href="#" class="social-youtube"><img src="./img/iconmonstr-youtube-3-icon-48.png" alt=""></a>
+            </div>
+                <div class="footer__item footer__social">
+                    <div class="footer__social-row">
+                        <a href="#"><img class="footer__social-img" src="./img/iconmonstr-facebook-3-icon-48.png" alt=""></a>
+                        <a href="#"><img class="footer__social-img" src="./img/iconmonstr-youtube-3-icon-48.png" alt=""></a>
                     </div>
-                    <div class="social-footer">
-                        <a href="#"><img src="./img/iconmonstr-twitter-3-icon-48.png" alt=""></a>
-                        <a href="#"><img src="./img/iconmonstr-google-plus-3-icon-48.png" alt=""></a>
+                    <div class="footer__social__row">
+                        <a href="#"><img class="footer__social-img" src="./img/iconmonstr-twitter-3-icon-48.png" alt=""></a>
+                        <a href="#"><img class="footer__social-img" src="./img/iconmonstr-google-plus-3-icon-48.png" alt=""></a>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-12 col-12">
-                    <h3>Newsletter</h3>
-                    <input class="email-form" type="text" placeholder="Your email">
-                    <input class="subscribe-button text-light" type="submit" value="Subscribe">
+                <div class="footer__item footer__newsletter">
+                    <h3 class="footer__newsletter-title">Newsletter</h3>
+                    <div class="footer__newsletter-form">
+                        <input class="footer__newsletter-email-input" type="text" placeholder="Your email">
+                        <input class="footer__newsletter-button-submit" type="submit" value="Subscribe">
+                    </div>
+                    
                 </div>
                 <div class="col-12 text-center mb-1">Copyright © 2015 Name | Design by Jakub Chynoradský</div>
             </div>
