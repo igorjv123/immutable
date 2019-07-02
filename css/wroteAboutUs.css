@@ -1,0 +1,14 @@
+.wrote-about-us__images-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 0;
+  opacity: .5;
+  height: 400px; }
+
+.wrote-about-us__images-container__img {
+  display: block;
+  width: 20%;
+  object-fit: contain; }
+
+.wrote-about-us__title {
+  text-align: center; }
