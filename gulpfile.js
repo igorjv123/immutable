@@ -6,15 +6,7 @@ const del = require("del");
 const gulp = require("gulp");
 const merge = require("merge-stream");
 var sass = require('gulp-sass');
-var htmlImport = require('gulp-html-import');
 
-
-// BrowserSync
-function importHtml(){
-  return gulp.src('./index.html')
-  .pipe(htmlImport('./components/random/random.html'))
-  .pipe(gulp.dest('/build/index.html')); 
-}
 function browserSync(done) {
   browsersync.init({
     server: {
@@ -26,10 +18,8 @@ function browserSync(done) {
 }
 var paths = {
   styles: {
-      // By using styles/**/*.sass we're telling gulp to check all folders for any sass file
       src: "./**/*.sass",
-      // Compiled files will end up in whichever folder it's found in (partials are not compiled)
-      dest: "./"
+      dest: "css"
   }
 };
 // BrowserSync reload
@@ -39,11 +29,9 @@ function browserSyncReload(done) {
   done();
 }
 function style() {
-  return gulp
-      .src(paths.styles.src)
-      .pipe(sass())
-      .on("error", sass.logError)
-      .pipe(gulp.dest(paths.styles.dest));
+  return gulp.src('./sass/**/*.sass')
+  .pipe(sass().on('error', sass.logError))
+  .pipe(gulp.dest('./css'));
 }
 // Clean vendor
 function clean() {
@@ -68,8 +56,7 @@ function modules() {
 function watchFiles() {
   gulp.watch("./**/*.css", browserSyncReload);
   gulp.watch("./**/*.html", browserSyncReload);
-  gulp.watch('./**/*.sass', style)
-  gulp.watch('./',importHtml)
+  gulp.watch('./sass/**/*.sass', style)
 }
 
 // Define complex tasks
@@ -84,5 +71,4 @@ exports.build = build;
 exports.watch = watch;
 exports.default = build;
 exports.style = style;
-exports.importHtml = importHtml;
 
