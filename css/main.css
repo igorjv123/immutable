@@ -208,17 +208,6 @@ footer {
     color: #a5a5a5;
     margin: 0 0 20px 0;
 }
-.wrote-about-us {
-    padding: 50px 0 0 0;  
-}
-
-.wrote-about-us_img {
-    display: block;
-    opacity: .5;
-    object-fit: contain;
-    margin: 50px 0px;
-    padding: 0px 10px;
-}
 .location-contact::before {
     content: "";
     background: url(../img/Diamond@2x.png) no-repeat;
