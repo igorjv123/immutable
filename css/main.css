@@ -50,125 +50,126 @@ body {
     position: relative;
     object-fit: contain;
 }
-.app-features {
-    padding-top: 5rem;
-}
 
-.app-features__line {
-    height: 2px;
-    background-color: #f1f1f1;
-    margin: 0 40px;
-    width: calc(100% - 80px);
-}
+/*.app-features {*/
+    /*padding-top: 5rem;*/
+/*}*/
 
-.app-features .row::after {
-    content: '';
-    height: 2px;
-    background-color: #f1f1f1;
-    width: calc(100% - 80px);
-    margin: 70px 40px;
-    top: 0;
-    left: 0;
-    float: left;
-}
+/*.app-features__line {*/
+    /*height: 2px;*/
+    /*background-color: #f1f1f1;*/
+    /*margin: 0 40px;*/
+    /*width: calc(100% - 80px);*/
+/*}*/
 
-.app-feature__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+/*.app-features .row::after {*/
+    /*content: '';*/
+    /*height: 2px;*/
+    /*background-color: #f1f1f1;*/
+    /*width: calc(100% - 80px);*/
+    /*margin: 70px 40px;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*float: left;*/
+/*}*/
 
-.app-feature__center {
-    margin-top: 200px;
-}
+/*.app-feature__item {*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*align-items: center;*/
+/*}*/
 
-.app-feature__item__icon {
-    width: 100%;
-    max-width: 61px;
-    height: auto;
-    object-fit: contain;
-    max-height: 60px;
-}
+/*.app-feature__center {*/
+    /*margin-top: 200px;*/
+/*}*/
 
-.app-feature__item__header {
-    color: #606060;
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding-bottom: 15px;
-    padding-top: 15px;
-}
+/*.app-feature__item__icon {*/
+    /*width: 100%;*/
+    /*max-width: 61px;*/
+    /*height: auto;*/
+    /*object-fit: contain;*/
+    /*max-height: 60px;*/
+/*}*/
 
-.app-feature__item__description {
-    color: #cccecf;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.2em;
-}
+/*.app-feature__item__header {*/
+    /*color: #606060;*/
+    /*font-size: 1.5rem;*/
+    /*font-weight: bold;*/
+    /*padding-bottom: 15px;*/
+    /*padding-top: 15px;*/
+/*}*/
 
-.app-feature__item-center {
-    margin-top: 200px;
-}
+/*.app-feature__item__description {*/
+    /*color: #cccecf;*/
+    /*font-size: 14px;*/
+    /*font-weight: 400;*/
+    /*line-height: 1.2em;*/
+/*}*/
 
-.default-header-text {
-    font-family: "Open Sans", "Arial", sans-serif;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #606060;
-}
+/*.app-feature__item-center {*/
+    /*margin-top: 200px;*/
+/*}*/
 
-.app-works__image__wrap {
-    padding: 20px 70px 0 100px;
-}
+/*.default-header-text {*/
+    /*font-family: "Open Sans", "Arial", sans-serif;*/
+    /*font-size: 1.5rem;*/
+    /*font-weight: bold;*/
+    /*color: #606060;*/
+/*}*/
 
-.app-works__image {
-    width: 100%;
-    height: 100%;
-    max-width: 337px;
-    max-height: 402px;
-    object-fit: cover;
-}
+/*.app-works__image__wrap {*/
+    /*padding: 20px 70px 0 100px;*/
+/*}*/
 
-.app-works__item {
-    margin-top: 30px;
-}
+/*.app-works__image {*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*max-width: 337px;*/
+    /*max-height: 402px;*/
+    /*object-fit: cover;*/
+/*}*/
 
-.open-sans {
-    font-family: "Open Sans", Arial, sans-serif;
-}
+/*.app-works__item {*/
+    /*margin-top: 30px;*/
+/*}*/
 
-.app-works__header {
-    color: #303030;
-    font-size: 30px;
-    font-weight: 400;
-    width: 100%;
-}
+/*.open-sans {*/
+    /*font-family: "Open Sans", Arial, sans-serif;*/
+/*}*/
 
-.app-works__description {
-    color: #cccecf;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.6em;
-}
+/*.app-works__header {*/
+    /*color: #303030;*/
+    /*font-size: 30px;*/
+    /*font-weight: 400;*/
+    /*width: 100%;*/
+/*}*/
 
-.app-works__item__header {
-    color: #505050;
-    font-size: 19px;
-    font-weight: 600;
-    line-height: 15.28px;
-}
+/*.app-works__description {*/
+    /*color: #cccecf;*/
+    /*font-size: 18px;*/
+    /*font-weight: 400;*/
+    /*line-height: 1.6em;*/
+/*}*/
 
-.app-works__item__description {
-    color: #cccecf;
-    font-size: 14px;
-    font-weight: 400;
-}
+/*.app-works__item__header {*/
+    /*color: #505050;*/
+    /*font-size: 19px;*/
+    /*font-weight: 600;*/
+    /*line-height: 15.28px;*/
+/*}*/
+
+/*.app-works__item__description {*/
+    /*color: #cccecf;*/
+    /*font-size: 14px;*/
+    /*font-weight: 400;*/
+/*}*/
 .reviews-carousel {
     height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin: 0;
-    padding: 70px; 
+    padding: 70px;
     padding: 0;
     position: relative;
 }
@@ -181,7 +182,7 @@ body {
      display: flex;
      justify-content: center;
      align-items: center;
-     color: #fff;   
+     color: #fff;
      text-align: left;
      position: absolute;
      top: 43%;
