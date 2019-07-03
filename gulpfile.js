@@ -19,7 +19,7 @@ function browserSync(done) {
 var paths = {
   styles: {
       src: "./**/*.sass",
-      dest: "css"
+      dest: "./css"
   }
 };
 // BrowserSync reload
