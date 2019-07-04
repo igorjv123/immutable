@@ -137,7 +137,7 @@ body {
 }
 
 .app-works__header {
-    color: #303030;
+    color: #575757;
     font-size: 30px;
     font-weight: 400;
     width: 100%;
@@ -203,74 +203,6 @@ body {
     height: 100px;
     border: 4px solid #fff;
     margin: 10px;
-}
-footer {
-    color: #a5a5a5;
-    margin: 0 0 20px 0;
-}
-.location-contact::before {
-    content: "";
-    background: url(../img/Diamond@2x.png) no-repeat;
-    background-size: contain;
-    padding-left: 30px;
-    height: 10px;
-}
-.phone-contact::before {
-    content: "";
-    background: url(../img/Diamond@2x.png) no-repeat;
-    background-size: contain;
-    padding-left: 30px;
-    height: 10px;
-}
-.mail-contact::before{
-    content: "";
-    background: url(../img/Diamond@2x.png) no-repeat;
-    background-size: contain;
-    padding-left: 30px;
-    height: 10px;
-}
-.title-contact{
-    padding-left: 29px;
-}
-.unmarked {
-    list-style: none;
-}
-.unmarked li {
-    padding: 10px 0px;
-}
-.social-footer {
-    display: flex;
-    margin: 10px;
-    justify-content: space-between;
-    width: 130px;
-}
-.email-form {
-    outline: none;
-    border: none;
-    border-bottom: 2px solid #f4f4f4;
-}
-.subscribe-button{
-    border: none;
-    outline: none;
-    cursor: pointer;
-    border-radius: 10px;
-    padding: 3px 10px;
-    margin: 10px 0 10px 0;
-    background-color: #7e3ba1;
-}
-.subscribe-button:hover{
-    background-color: #9633cc;
-}
-@media screen and (max-width: 992px){
-    .container {
-        max-width: 100%;
-    }
-    .app-works__image__wrap {
-        padding: 0 30px 30px;
-    }
-    .wrote-about-us_img {
-        width: 40%;
-    }
 }
 
 @media screen and (max-width: 575px) {
