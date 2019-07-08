@@ -20,6 +20,70 @@
 .wrote-about-us__title {
   text-align: center; }
 
+.sign-component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url("../img/tab3.jpg");
+  background-size: cover;
+  height: 400px; }
+  .sign-component__inner {
+    background: #fff;
+    padding: 20px;
+    height: 350px;
+    width: 400px;
+    position: relative;
+    overflow: hidden; }
+  .sign-component__tabs {
+    background-color: inherit;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px; }
+  .sign-component__tab-content {
+    display: flex;
+    position: absolute;
+    left: 0;
+    transition: left 0.3s ease-out;
+    justify-content: center; }
+
+.tab-button {
+  padding: 10px;
+  width: 100px;
+  text-align: center; }
+
+.active {
+  background-color: #7e3ba1;
+  color: #fff; }
+
+.sign-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: available;
+  width: 400px; }
+  .sign-form__input {
+    display: block;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    width: 250px; }
+  .sign-form__button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px 20px;
+    background-color: #7e3ba1;
+    color: #f1f1f1; }
+  .sign-form__button:hover {
+    background-color: #6f348e; }
+
 .footer {
   width: 100%;
   display: flex;
