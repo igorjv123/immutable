@@ -1,0 +1,82 @@
+@import 'variables'
+@import 'mixins'
+
+*
+  margin: 0
+  padding: 0
+
+body
+  font-family: Montserrat, Arial, Helvetica, sans-serif
+  overflow-x: hidden
+
+.line-after::after
+  content: ''
+  height: 2px
+  background-color: #f1f1f1
+  width: calc(100% - 80px)
+  margin: 70px 40px
+  top: 0
+  left: 0
+  float: left
+
+.white
+  color: #fff
+
+.light-text
+  font-family: 'Montserrat Hairline', Arial
+  font-weight: 200
+  font-size: 3em
+
+.relative
+  position: relative
+
+.first-view
+  height: 100vh
+  background-image: url('../assets/3130_purple_abstract.png')
+  background-size: cover
+  padding: 20px 50px
+  &__content
+    display: flex
+    height: 100%
+    flex-direction: column
+    align-items: center
+    justify-content: flex-end
+    text-align: center
+
+  &__services
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    height: 60%
+    padding: 50px 20%
+    flex-wrap: wrap
+    +middle-screen
+      align-items: flex-start
+    +small-screen
+      flex-direction: column
+      justify-content: flex-start
+      align-items: center
+
+.iphone-6-mockup
+  display: block
+  position: absolute
+  width: 30%
+  bottom: -20%
+  +middle-screen
+    width: 50%
+  +small-screen
+    width: 70%
+
+
+.services-logo
+  width: 20%
+  object-fit: contain
+  display: block
+  position: relative
+  object-fit: contain
+  cursor: pointer
+  +middle-screen
+    width: 45%
+  +small-screen
+    width: 80%
+
