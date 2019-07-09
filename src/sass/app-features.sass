@@ -1,0 +1,42 @@
+@import "variables"
+@import "mixins"
+
+.app-features
+  width: 100%
+
+  &__inner
+    width: 100%
+    display: flex
+
+.app-feature
+  display: flex
+  flex-direction: column
+  align-items: center
+
+  &--center
+    @extend %align_cross_axis
+    flex-direction: column
+    padding-top: 200px
+
+  &__image
+    width: 100%
+    max-width: 61px
+    height: auto
+    object-fit: contain
+    max-height: 60px
+
+  &__header
+    font-family: $open-sans
+    color: $header-color
+    font-size: 1.5rem
+    font-weight: bold
+    padding-bottom: 15px
+    padding-top: 15px
+
+  &__description
+    font-family: $open-sans
+    color: $description-color
+    font-size: 14px
+    font-weight: 400
+    line-height: 1.2em
+    text-align: center

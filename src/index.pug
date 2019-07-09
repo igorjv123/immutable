@@ -1,0 +1,175 @@
+doctype html
+head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description' content='')
+    meta(name='author' content='')
+    title Immutable first project
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans&display=swap' rel='stylesheet')
+    link(href='./vendor/bootstrap/css/bootstrap.min.css' rel='stylesheet')
+
+section.first-view
+    nav.navbar
+        .container-fluid
+            a.navbar-brand(href='#') Prototype
+            button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarResponsive' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Toggle navigation')
+                span.navbar-toggler-icon
+            #navbarResponsive.collapse.navbar-collapse
+                ul.navbar-nav.ml-auto
+                    li.nav-item.active
+                        a.nav-link(href='#')
+                            | Home
+                            span.sr-only (current)
+                    li.nav-item
+                        a.nav-link(href='#') About
+                    li.nav-item
+                        a.nav-link(href='#') Services
+                    li.nav-item
+                        a.nav-link(href='#') Contact
+    .container-fluid.h-100.relative(class='.align-items-baseline')
+        .row.justify-content-center.align-content-center.h-50
+            .col.col-lg-5.align-self-center.text-center
+                h1.light-text.white Lorem ipsum dolor sit amet, consectetur
+            img.iphone-6-mockup.col-lg-5(src='./assets/iphone_6_mockup.png' alt='iphone')
+        .row.justify-content-center.relative.h-50
+            img.services-logo.col.col-lg-2.col-md-2.offset-md-0(src='./assets/googleplay.png' alt='')
+            img.services-logo.col.col-lg-2.col-md-3.offset-md-3(src='./assets/available-on-the-app-store-badge.png' alt='')
+main.container-fluid
+    .container
+        section.app-features
+            .app-features__inner
+                .app-feature
+                    img.app-feature__image(src='./assets/cloud.png' alt='cloud icon')
+                    h3.app-feature__header
+                        | Cloud sync
+                    p.app-feature__description
+                        | Etiam rhoncus, metus vitae volutpat porta, risus dolor mollis nunc, sit amet maximus nunc
+                        | turpis vitae elit. Cras ac efficitur massa.
+                .app-feature--center
+                    img.app-feature__image(src='./assets/bell.png' alt='cloud icon')
+                    h3.app-feature__header
+                        | Notifications
+                    p.app-feature__description
+                        | Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+                        | Quisque augue odio, congue id turpis suscipit, mattis lacinia nulla.
+                .app-feature
+                    img.app-feature__image(src='./assets/diamount.png' alt='cloud icon')
+                    h3.app-feature__header
+                        | Beautiful design
+                    p.app-feature__description
+                        | Vivamus vitae lectus sem. Vestibulum nec consequat lacus, nec fringilla urna.
+                        | Phasellus non bibendum leo. Mauris suscipit nisi ac commodo bibendum.
+        section.app-works.container__app-works
+            .app-works__image-wrap
+                img.app-works__image(src='./assets/hand-template.png' alt='iphone image with bridge picture')
+            .app-works__item-container
+                h2.app-works__header
+                    | How our app works
+                p.app-works__description
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                    | ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    | laboris nisi ut aliquip.
+                .app-function
+                    .app-function__image-wrap
+                        img.app-function__image(src='./assets/create-icon.png' alt='plus in circle')
+                    .app-function__text
+                        h4.app-function__header
+                            | Create
+                        p.app-function__description
+                            | Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+                            | Curae; Quisque augue odio, congue id turpis suscipit, mattis lacinia nulla.
+                .app-function
+                    .app-function__image-wrap
+                        img.app-function__image(src='./assets/share-icon.png' alt='share icon')
+                    .app-function__text
+                        h4.app-function__header
+                            | Share
+                        p.app-function__description
+                            | Vivamus vitae lectus sem. Vestibulum nec consequat lacus, nec fringilla urna.
+                            | Phasellus non bibendum leo. Mauris suscipit nisi ac commodo bibendum.
+
+    //section.reviews-carousel.container-fluid
+    //    h1.review-header.text-center.w-100.text-light What people say about us?
+    //    #demo.container-fluid.carousel.slide(data-ride='carousel')
+    //        ol.carousel-indicators
+    //            li.active(data-target='#demo' data-slide-to='0')
+    //            li(data-target='#demo' data-slide-to='1')
+    //            li(data-target='#demo' data-slide-to='2')
+    //        .carousel-inner.d-flex.align-content-center
+    //            .carousel-item.active
+    //                img.d-block.w-100(src='./assets/tab1.jpg' alt='First slide')
+    //                .carousel-caption.d-md-block.h-100
+    //                    .review
+    //                        img.review-photo.d-block(src='./assets/128.jpg' alt='')
+    //                        p
+    //                            | Donec finibus mattis metus, eget finibus tortor porta in. Ut id imperdiet nibh. Morbi pretium fermentum lorem, quis mattis velit dictum et.
+    //            .carousel-item
+    //                img.d-block.w-100(src='./assets/tab2.jpg' alt='Second slide')
+    //                .carousel-caption.d-md-block.h-100
+    //                    .review
+    //                        img.review-photo.d-block(src='./assets/128.jpg' alt='')
+    //                        p
+    //                            | Donec finibus mattis metus, eget finibus tortor porta in. Ut id imperdiet nibh. Morbi pretium fermentum lorem, quis mattis velit dictum et.
+    //            .carousel-item
+    //                img.d-block.w-100(src='./assets/tab3.jpg' alt='Third slide')
+    //                .carousel-caption.d-md-block.h-100
+    //                    .review
+    //                        img.review-photo.d-block(src='./assets/128.jpg' alt='')
+    //                        p
+    //                            | Donec finibus mattis metus, eget finibus tortor porta in. Ut id imperdiet nibh. Morbi pretium fermentum lorem, quis mattis velit dictum et.
+    //        a.carousel-control-prev(href='#demo' role='button' data-slide='prev')
+    //            span.carousel-control-prev-icon(aria-hidden='true')
+    //            span.sr-only Previous
+    //        a.carousel-control-next(href='#demo' role='button' data-slide='next')
+    //            span.carousel-control-next-icon(aria-hidden='true')
+    //            span.sr-only Next
+    section.wrote-about-us
+        h1.wrote-about-us__title Wrote about us
+        .wrote-about-us__images-container
+            img.wrote-about-us__img(src='./assets/Forbes_logo.svg.png' alt='')
+            img.wrote-about-us__img(src='./assets/the-new-york-times-logo-vert.png' alt='')
+            img.wrote-about-us__img(src='./assets/2000px-The_Wall_Street_Journal_Logo.svg.png' alt='')
+            img.wrote-about-us__img(src='./assets/Mashable-Logo.png' alt='')
+    section.sign-component
+        .sign-component__inner
+            .sign-component__tabs
+                #signInTab.tab-button.active Sign In
+                #signUpTab.tab-button Sign Up
+            #signForm.sign-component__tab-content
+                form.sign-form
+                    input#signInEmail.sign-form__input(type='email' placeholder='E-mail')
+                    input#signInPassword.sign-form__input(type='password' placeholder='password')
+                    input#signInSubmit.sign-form__button(type='submit' value='Sign In')
+                form.sign-form
+                    input#signUpEmail.sign-form__input(type='email' placeholder='E-mail')
+                    input#signUpPassword.sign-form__input(type='password' placeholder='password')
+                    input#signUpRePassword.sign-form__input(type='password' placeholder='repeat password')
+                    input#signUpSubmit.sign-form__button(type='submit' value='Sign Up')
+    footer.footer
+        .footer__item.footer__contats
+            h3.footer__contacts-title Contact
+            .footer__contacts-items
+                p.footer__contacts-item 1600 Amphitheatre Pkwy, Mountain View, United States
+                p.footer__contacts-item +1 650-253-0000
+                p.footer__contacts-item google@google.com
+        .footer__item.footer__social
+            .footer__social-row
+                a(href='#')
+                    img.footer__social-img(src='./assets/iconmonstr-facebook-3-icon-48.png' alt='')
+                a(href='#')
+                    img.footer__social-img(src='./assets/iconmonstr-youtube-3-icon-48.png' alt='')
+            .footer__social-row
+                a(href='#')
+                    img.footer__social-img(src='./assets/iconmonstr-twitter-3-icon-48.png' alt='')
+                a(href='#')
+                    img.footer__social-img(src='./assets/iconmonstr-google-plus-3-icon-48.png' alt='')
+        .footer__item.newsletter
+            h3.newsletter__title Newsletter
+            .newsletter__form
+                input.newsletter__email-input(type='text' placeholder='Your email')
+                input.newsletter__button-submit(type='submit' value='Subscribe')
+        .col-12.text-center.mb-1 Copyright &copy; 2015 Name | Design by Jakub Chynoradsk&yacute;
+script(src='vendor/jquery/jquery.slim.min.js')
+script(src='vendor/bootstrap/js/bootstrap.bundle.min.js')
+script(src='./scripts/login.js')
+script(type='text/javascript' src='bundle.3c1f9a730fbe4a30cf06.js')

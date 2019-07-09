@@ -1,0 +1,40 @@
+@import "mixins"
+@import "variables"
+
+.app-works
+  width: 100%
+  @extend %align_cross_axis
+  +tablet-portrait
+    flex-direction: column
+
+  &__image-wrap
+    width: 100%
+    display: flex
+    align-items: flex-end
+    justify-content: flex-end
+
+  &__image
+    width: 100%
+    height: 100%
+    max-width: 337px
+    max-height: 402px
+    object-fit: cover
+
+  &__item-container
+    @extend %align_cross_axis
+    flex-direction: column
+    width: 100%
+
+  &__header
+    color: $header-color
+    font-size: 30px
+    font-weight: 400
+    width: 100%
+
+  &__description
+    font-family: $open-sans
+    color: $description-color
+    font-size: 18px
+    font-weight: 400
+    line-height: 1.6em
+

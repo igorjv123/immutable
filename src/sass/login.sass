@@ -1,0 +1,69 @@
+@import 'variables'
+@import 'mixins'
+
+.sign-component
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  background: url("../assets/tab3.jpg")
+  background-size: cover
+  height: 400px
+  &__inner
+    background: #fff
+    padding: 20px
+    height: 350px
+    width: 400px
+    position: relative
+    overflow: hidden
+
+  &__tabs
+    background-color: inherit
+    display: flex
+    justify-content: center
+    cursor: pointer
+    padding: 14px 16px
+    transition: 0.3s
+    font-size: 17px
+
+  &__tab-content
+    display: flex
+    position: absolute
+    left: 0
+    transition: left 0.3s ease-out
+    justify-content: center
+.tab-button
+  padding: 10px
+  width: 100px
+  text-align: center
+.active
+  background-color: $violet-color
+  color: #fff
+
+.sign-form
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  min-height: available
+  width: 400px
+  &__input
+    display: block
+    padding: 10px
+    border: 2px solid #ddd
+    border-radius: 3px
+    margin-bottom: 20px
+    width: 250px
+  &__button
+    border: none
+    outline: none
+    cursor: pointer
+    border-radius: 5px
+    padding: 5px 20px
+    background-color: $violet-color
+    color: $light-text
+  &__button:hover
+    background-color: darken($violet-color, 5%)
+
+//input
+  //  margin-bottom: 20px
