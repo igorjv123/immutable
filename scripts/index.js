@@ -1,3 +1,2 @@
-const a = 1;
-
-console.log(a);
+import './login.js'
+import './../sass/style.sass';

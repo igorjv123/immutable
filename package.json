@@ -3,7 +3,9 @@
     "name": "startbootstrap-bare",
     "version": "4.2.1",
     "scripts": {
-        "start": "node_modules/.bin/gulp watch"
+        "build": "webpack --mode=production",
+        "start": "webpack-dev-server --open --mode=development",
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "description": "A basic HTML starter template for Bootstrap",
     "keywords": [
@@ -29,17 +31,30 @@
         "url": "https://github.com/BlackrockDigital/startbootstrap-bare.git"
     },
     "dependencies": {
+        "@babel/polyfill": "^7.4.4",
+        "babel-core": "^6.26.3",
+        "babel-loader": "^7.1.5",
         "bootstrap": "4.3.1",
+        "copy-webpack-plugin": "^5.0.3",
+        "extract-text-webpack-plugin": "^3.0.2",
+        "html-webpack-plugin": "^3.2.0",
         "install": "^0.12.2",
         "jquery": "3.4.1",
-        "npm": "^6.9.2"
+        "npm": "^6.10.0",
+        "webpack-dev-server": "^3.7.2"
     },
     "devDependencies": {
+        "@babel/cli": "^7.5.0",
+        "@babel/core": "^7.5.0",
+        "@babel/preset-env": "^7.5.2",
         "browser-sync": "2.26.7",
+        "css-loader": "^3.0.0",
         "del": "^4.1.1",
-        "gulp": "4.0.2",
-        "gulp-sass": "^4.0.2",
-        "merge-stream": "2.0.0",
-        "node-sass": "^4.12.0"
+        "file-loader": "^4.0.0",
+        "node-sass": "^4.12.0",
+        "sass-loader": "^7.1.0",
+        "style-loader": "^0.23.1",
+        "webpack": "^4.35.3",
+        "webpack-cli": "^3.3.5"
     }
 }

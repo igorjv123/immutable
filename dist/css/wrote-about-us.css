@@ -1,0 +1,21 @@
+.wrote-about-us__images-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 50px 0;
+  opacity: .5; }
+
+.wrote-about-us__img {
+  display: block;
+  width: 20%;
+  object-fit: contain;
+  margin: 30px 0; }
+  @media screen and (max-width: 575px) {
+    .wrote-about-us__img {
+      width: 90%; } }
+  @media screen and (max-width: 992px) {
+    .wrote-about-us__img {
+      width: 40%; } }
+
+.wrote-about-us__title {
+  text-align: center; }

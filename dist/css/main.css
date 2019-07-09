@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+.line-after::after {
+    content: '';
+    height: 2px;
+    background-color: #f1f1f1;
+    width: calc(100% - 80px);
+    margin: 70px 40px;
+    top: 0;
+    left: 0;
+    float: left;
+}
+.container-fluid {
+    padding: 0;
+}
+.white{
+    color: #fff;
+}
+.light-text {
+    font-family: 'Montserrat Hairline', Arial;
+    font-weight: 200;
+    font-size: 3em;
+}
+.relative {
+    position: relative;
+}
+.first-view {
+    height: 100vh;
+    background-image: url('../img/3130_purple_abstract.png');
+    background-size: cover;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.iphone-6-mockup{
+    display: block;
+    position: absolute;
+    bottom: -35%;
+}
+.services-logo {
+    display: block;
+    position: relative;
+    object-fit: contain;
+}
+
+/*.app-features {*/
+    /*padding-top: 5rem;*/
+/*}*/
+
+/*.app-features__line {*/
+    /*height: 2px;*/
+    /*background-color: #f1f1f1;*/
+    /*margin: 0 40px;*/
+    /*width: calc(100% - 80px);*/
+/*}*/
+
+/*.app-features .row::after {*/
+    /*content: '';*/
+    /*height: 2px;*/
+    /*background-color: #f1f1f1;*/
+    /*width: calc(100% - 80px);*/
+    /*margin: 70px 40px;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*float: left;*/
+/*}*/
+
+/*.app-feature__item {*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*align-items: center;*/
+/*}*/
+
+/*.app-feature__center {*/
+    /*margin-top: 200px;*/
+/*}*/
+
+/*.app-feature__item__icon {*/
+    /*width: 100%;*/
+    /*max-width: 61px;*/
+    /*height: auto;*/
+    /*object-fit: contain;*/
+    /*max-height: 60px;*/
+/*}*/
+
+/*.app-feature__item__header {*/
+    /*color: #606060;*/
+    /*font-size: 1.5rem;*/
+    /*font-weight: bold;*/
+    /*padding-bottom: 15px;*/
+    /*padding-top: 15px;*/
+/*}*/
+
+/*.app-feature__item__description {*/
+    /*color: #cccecf;*/
+    /*font-size: 14px;*/
+    /*font-weight: 400;*/
+    /*line-height: 1.2em;*/
+/*}*/
+
+/*.app-feature__item-center {*/
+    /*margin-top: 200px;*/
+/*}*/
+
+/*.default-header-text {*/
+    /*font-family: "Open Sans", "Arial", sans-serif;*/
+    /*font-size: 1.5rem;*/
+    /*font-weight: bold;*/
+    /*color: #606060;*/
+/*}*/
+
+/*.app-works__image__wrap {*/
+    /*padding: 20px 70px 0 100px;*/
+/*}*/
+
+/*.app-works__image {*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*max-width: 337px;*/
+    /*max-height: 402px;*/
+    /*object-fit: cover;*/
+/*}*/
+
+/*.app-works__item {*/
+    /*margin-top: 30px;*/
+/*}*/
+
+/*.open-sans {*/
+    /*font-family: "Open Sans", Arial, sans-serif;*/
+/*}*/
+
+/*.app-works__header {*/
+    /*color: #303030;*/
+    /*font-size: 30px;*/
+    /*font-weight: 400;*/
+    /*width: 100%;*/
+/*}*/
+
+/*.app-works__description {*/
+    /*color: #cccecf;*/
+    /*font-size: 18px;*/
+    /*font-weight: 400;*/
+    /*line-height: 1.6em;*/
+/*}*/
+
+/*.app-works__item__header {*/
+    /*color: #505050;*/
+    /*font-size: 19px;*/
+    /*font-weight: 600;*/
+    /*line-height: 15.28px;*/
+/*}*/
+
+/*.app-works__item__description {*/
+    /*color: #cccecf;*/
+    /*font-size: 14px;*/
+    /*font-weight: 400;*/
+/*}*/
+.reviews-carousel {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    padding: 70px;
+    padding: 0;
+    position: relative;
+}
+.review-header{
+    margin-top: 50px;
+    position: absolute;
+    z-index: 10;
+}
+.review {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     color: #fff;
+     text-align: left;
+     position: absolute;
+     top: 43%;
+     left: 0;
+     right: 0;
+
+}
+.review_bg {
+    object-fit: cover;
+    height: inherit;
+    width: 100%;
+}
+.carousel-item{
+    height: 400px;
+}
+.review-photo {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border: 4px solid #fff;
+    margin: 10px;
+}
+footer {
+    color: #a5a5a5;
+    margin: 0 0 20px 0;
+}
+.location-contact::before {
+    content: "";
+    background: url(../img/Diamond@2x.png) no-repeat;
+    background-size: contain;
+    padding-left: 30px;
+    height: 10px;
+}
+.phone-contact::before {
+    content: "";
+    background: url(../img/Diamond@2x.png) no-repeat;
+    background-size: contain;
+    padding-left: 30px;
+    height: 10px;
+}
+.mail-contact::before{
+    content: "";
+    background: url(../img/Diamond@2x.png) no-repeat;
+    background-size: contain;
+    padding-left: 30px;
+    height: 10px;
+}
+.title-contact{
+    padding-left: 29px;
+}
+.unmarked {
+    list-style: none;
+}
+.unmarked li {
+    padding: 10px 0px;
+}
+.social-footer {
+    display: flex;
+    margin: 10px;
+    justify-content: space-between;
+    width: 130px;
+}
+.email-form {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #f4f4f4;
+}
+.subscribe-button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 3px 10px;
+    margin: 10px 0 10px 0;
+    background-color: #7e3ba1;
+}
+.subscribe-button:hover{
+    background-color: #9633cc;
+}
+@media screen and (max-width: 992px){
+    .container {
+        max-width: 100%;
+    }
+    .app-works__image__wrap {
+        padding: 0 30px 30px;
+    }
+    .wrote-about-us_img {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .app-features {
+        padding-top: 15rem;
+    }
+    .app-feature__item-center {
+        margin: 0;
+    }
+    .wrote-about-us_img {
+        width: 90%;
+    }
+    .wrote-about-us {
+        justify-content: center;
+    }
+}

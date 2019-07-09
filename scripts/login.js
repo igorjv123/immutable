@@ -9,16 +9,10 @@ signInTab.addEventListener('click', (e) => {
     signUpTab.className = signUpTab.className.replace(" active", "");
     activeFirstTab = true;
     signForm.style.left = '0px'
-    changeTab(activeFirstTab)
 })
 signUpTab.addEventListener('click', (e) => {
     signUpTab.className += !signUpTab.className.includes('active')?" active":'';
     signInTab.className = signInTab.className.replace(" active", "");
     activeFirstTab = false;
     signForm.style.left = '-400px'
-    changeTab(activeFirstTab)
 })
-function changeTab(tab) {
-    document.getElementById('signInForm').style.display = tab?'flex':'none'
-    document.getElementById('signUpForm').style.display = tab?'none':'flex'
-}
