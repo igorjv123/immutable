@@ -45,8 +45,8 @@ var config = {
         }),
 
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, 'src', 'index.pug'),
-            filename: 'index.html'
+            template: path.resolve(__dirname, 'src', 'old-index.html.pug'),
+            filename: 'old-index.html.html'
         }),
         new CopyPlugin([
             { from: 'src/assets', to: 'assets' },
