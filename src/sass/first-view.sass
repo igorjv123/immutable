@@ -7,7 +7,12 @@
 
 body
   font-family: Montserrat, Arial, Helvetica, sans-serif
-  overflow-x: hidden
+  //overflow-x: hidden
+  scroll-behavior: smooth
+  overflow-y: scroll
+
+main
+  scroll-behavior: smooth !important
 
 .line-after::after
   content: ''
@@ -35,6 +40,7 @@ body
   background-image: url('../assets/3130_purple_abstract.png')
   background-size: cover
   padding: 20px 50px
+
   &__content
     display: flex
     height: 100%
