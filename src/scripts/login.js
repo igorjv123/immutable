@@ -1,18 +1,52 @@
-let activeFirstTab = true;
+const tabList = document.querySelectorAll('.tab-button'),
+      signComponent = document.querySelector('.sign-component__inner'),
+      signContent = document.querySelector('.sign-component__tab-content'),
+      tabButtons = Array.prototype.slice.call(tabList),
+      inputsList = document.querySelectorAll('sign-form__input'),
+      inputs = Array.prototype.slice.call(inputsList);
 
-let signInTab = document.getElementById('signInTab');
-let signUpTab = document.getElementById('signUpTab');
-let signForm = document.getElementById('signForm');
+signComponent.addEventListener('click', changeTab)
 
-signInTab.addEventListener('click', (e) => {
-    signInTab.className += !signInTab.className.includes('active')?" active":'';
-    signUpTab.className = signUpTab.className.replace(" active", "");
-    activeFirstTab = true;
-    signForm.style.left = '0px'
+signComponent.addEventListener('input', ({target})=>{
+    console.log(target)
 })
-signUpTab.addEventListener('click', (e) => {
-    signUpTab.className += !signUpTab.className.includes('active')?" active":'';
-    signInTab.className = signInTab.className.replace(" active", "");
-    activeFirstTab = false;
-    signForm.style.left = '-400px'
-})
+
+function changeTab({target}){
+    if (target.classList.contains('tab-button')){
+        scrollForms(tabButtons.indexOf(target))
+
+        setActiveTab(tabList, target)
+    }
+}
+
+function scrollForms(tabIndex) {
+    signContent.style.left = `${-tabIndex*400}px`
+}
+
+function setActiveTab(tabList, target) {
+    tabList.forEach((tab) => {
+        tab.classList.remove('active')
+    })
+    target.classList.add('active')
+}
+
+
+
+
+
+
+//
+// signInTab.addEventListener('click', (e) => {
+//     !signInTab.classList.contain('active') ? "active" : '';
+//     signUpTab.className = signUpTab.className.replace(" active", "");
+//
+//     activeFirstTab = true;
+//     signForm.style.left = '0px'
+// })
+// signUpTab.addEventListener('click', (e) => {
+//     signUpTab.className += !signUpTab.className.includes('active')?" active":'';
+//     signInTab.className = signInTab.className.replace(" active", "");
+//
+//     activeFirstTab = false;
+//     signForm.style.left = '-400px'
+// })
