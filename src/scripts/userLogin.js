@@ -19,20 +19,14 @@ async function signInUser(e) {
 
 function signIn(email, password) {
     return firebase.auth().signInWithEmailAndPassword(email, password)
-        .then(r => {
-            console.log(r);
-
+        .then(() => {
             notifyUser('Hi my dear)\nYou are successfully login');
-
             return true;
         })
-        .catch(function (error) {
-            console.warn(error);
-
+        .catch(error => {
             const errorCode = error.code;
 
             showCorrectErrorMsg(errorCode);
-
             return false;
         });
 }

@@ -30,31 +30,27 @@ function isPasswordsEqual(pass1, pass2) {
 }
 
 function getSignUpData() {
-    try {
-        const inputs = document.querySelectorAll('.signup-form .sign-form__input');
+    const email = document.querySelectorAll('#signUpEmail').value,
+        password = document.querySelectorAll('#signUpPassword').value,
+        confirmPassword = document.querySelectorAll('#signUpRePassword').value;
 
+    if(email && password && confirmPassword) {
         return {
-            email: inputs[0].value,
-            password: inputs[1].value,
-            confirmPassword: inputs[2].value
+            email,
+            password,
+            confirmPassword,
         };
-    } catch (e) {
-        console.warn(e);
     }
 }
 
 function signUp(email, password) {
     return firebase.auth().createUserWithEmailAndPassword(email, password)
-        .then(r => {
-            console.log(r);
+        .then(() => {
             notifyUser('You are successfully sign in');
             return true;
         })
-        .catch(function (error) {
-            console.warn(error);
-
+        .catch(error => {
             showCorrectErrorMsg(error.code);
-
             return false;
         });
 }

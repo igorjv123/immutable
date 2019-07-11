@@ -10,37 +10,33 @@ const INVALID_EMAIL = 'auth/invalid-email',
 function showCorrectErrorMsg(errorCode) {
     switch (errorCode) {
         case WRONG_PASSWORD:
-            wrongPassword();
+            handleWrongPassword();
             break;
         case INVALID_EMAIL:
-            wrongEmail();
+            handleWrongEmail();
             break;
         case USER_NOT_FOUND:
-            newUser();
+            createNewUser();
             break;
         case EMAIL_IN_USE:
             emailIsInUse();
             break;
         case WEEK_PASSWORD:
-            weekPassword();
+            handleWeekPassword();
             break;
         default:
             notifyUser('Something went wrong. \nPlease try again');
     }
 }
 
-function weekPassword() {
+function handleWeekPassword() {
     notifyUser('Your password is week\nPlease, select another one');
 }
 
 function emailIsInUse() {
-    // ask use to login
-    console.log('Email in use');
+    const flag = confirm('User with such email is already exists.\n Would you like to login?');
 
-    const fl = confirm('User with such email is already exists.\n Would you like to login?');
-    if (fl) {
-        console.log('Switch tabs');
-
+    if (flag) {
         //switch tabs, but save entered data?
         const loginBtn = document.querySelector('.tab-button');
 
@@ -48,15 +44,15 @@ function emailIsInUse() {
     }
 }
 
-function newUser() {
+function createNewUser() {
     notifyUser('User with this email wasn`t found\nTry to sign up firstly');
 }
 
-function wrongEmail() {
+function handleWrongEmail() {
     notifyUser('You have entered invalid email\nTry again');
 }
 
-function wrongPassword() {
+function handleWrongPassword() {
     notifyUser('You entered wrong password');
     // TODO add error text under input
 }
