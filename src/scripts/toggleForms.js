@@ -2,7 +2,7 @@ let isActiveFirstTab = true;
 const tabList = document.querySelectorAll('.tab-button'),
     signComponent = document.querySelector('.sign-component__inner'),
     signContent = document.querySelector('.sign-component__tab-content'),
-    tabButtons = Array.prototype.slice.call(tabList),
+    tabButtons = [...tabList].slice(), // Array.prototype.slice.call(tabList),
     inputsList = document.querySelectorAll('sign-form__input'),
     inputs = Array.prototype.slice.call(inputsList);
 

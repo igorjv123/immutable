@@ -11,50 +11,50 @@ head
     link(href='https://fonts.googleapis.com/css?family=Open+Sans&display=swap' rel='stylesheet')
 body
     header.header
-        nav.header__navigation
+        nav.header__navigation(role="navigation")
             ul.header__list
                 each value, index in [{text: 'App features', link: '#app-features'}, {text: 'App works', link: '#app-works'},{text: 'About us', link: '#about-us'}]
-                    li.header__list-item
+                    li.header__list-item(area-setsize='3' area-posinset=index + 1)
                         a(class="header__nav-link" href=value.link)=value.text
             //li.header_list-item
         button.header__login Login
-    main.container-fluid
-        section.first-view
+    main.container-fluid(role='main')
+        section.first-view(tabindex='0')
             .first-view__content
-                h1.light-text.white Lorem ipsum dolor sit amet, consectetur
+                h1.light-text.white(role='heading' aria-level='1') Lorem ipsum dolor sit amet, consectetur
                 img.iphone-6-mockup.col-lg-5(src='./assets/iphone_6_mockup.png' alt='iphone')
                 .first-view__services
                     img.services-logo(src='./assets/googleplay.png' alt='Playmarket')
                     img.services-logo(src='./assets/available-on-the-app-store-badge.png' alt='AppStore')
         .container
-            section.app-features(id="app-features")
+            section.app-features(id="app-features" tabindex='0')
                 .app-features__inner
                     .app-feature
                         img.app-feature__image(src='./assets/cloud.png' alt='cloud icon')
-                        h3.app-feature__header
+                        h3.app-feature__header(role='heading' aria-level='2')
                             | Cloud sync
                         p.app-feature__description
                             | Etiam rhoncus, metus vitae volutpat porta, risus dolor mollis nunc, sit amet maximus nunc
                             | turpis vitae elit. Cras ac efficitur massa.
                     .app-feature--center
                         img.app-feature__image(src='./assets/bell.png' alt='cloud icon')
-                        h3.app-feature__header
+                        h3.app-feature__header(role='heading' aria-level='3')
                             | Notifications
                         p.app-feature__description
                             | Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
                             | Quisque augue odio, congue id turpis suscipit, mattis lacinia nulla.
                     .app-feature
                         img.app-feature__image(src='./assets/diamount.png' alt='cloud icon')
-                        h3.app-feature__header
+                        h3.app-feature__header(role='heading' aria-level='3')
                             | Beautiful design
                         p.app-feature__description
                             | Vivamus vitae lectus sem. Vestibulum nec consequat lacus, nec fringilla urna.
                             | Phasellus non bibendum leo. Mauris suscipit nisi ac commodo bibendum.
-            section.app-works.container__app-works(id='app-works')
+            section.app-works.container__app-works(id='app-works' tabindex='0')
                 .app-works__image-wrap
                     img.app-works__image(src='./assets/hand-template.png' alt='iphone image with bridge picture')
                 .app-works__item-container
-                    h2.app-works__header
+                    h2.app-works__header(role='heading' aria-level='2')
                         | How our app works
                     p.app-works__description
                         | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -64,7 +64,7 @@ body
                         .app-function__image-wrap
                             img.app-function__image(src='./assets/create-icon.png' alt='plus in circle')
                         .app-function__text
-                            h4.app-function__header
+                            h4.app-function__header(role='heading' aria-level='3')
                                 | Create
                             p.app-function__description
                                 | Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
@@ -73,7 +73,7 @@ body
                         .app-function__image-wrap
                             img.app-function__image(src='./assets/share-icon.png' alt='share icon')
                         .app-function__text
-                            h4.app-function__header
+                            h4.app-function__header(role='heading' aria-level='3')
                                 | Share
                             p.app-function__description
                                 | Vivamus vitae lectus sem. Vestibulum nec consequat lacus, nec fringilla urna.
@@ -114,29 +114,29 @@ body
         //        a.carousel-control-next(href='#demo' role='button' data-slide='next')
         //            span.carousel-control-next-icon(aria-hidden='true')
         //            span.sr-only Next
-        section.wrote-about-us(id='about-us')
-            h1.wrote-about-us__title Wrote about us
-            .wrote-about-us__images-container
-                img.wrote-about-us__img(src='./assets/Forbes_logo.svg.png' alt='')
+        section.wrote-about-us(id='about-us' tabindex='0')
+            h1.wrote-about-us__title(role='heading' aria-level='2') Wrote about us
+            .wrote-about-us__images-container(role="img" aria-label="Logotypes of world famous companies")
+                img.wrote-about-us__img(src='./assets/Forbes_logo.svg.png' alt='Forbes international logotype')
                 img.wrote-about-us__img(src='./assets/the-new-york-times-logo-vert.png' alt='')
                 img.wrote-about-us__img(src='./assets/2000px-The_Wall_Street_Journal_Logo.svg.png' alt='')
                 img.wrote-about-us__img(src='./assets/Mashable-Logo.png' alt='')
-        section.sign-component
+        section.sign-component(tabindex='0')
             .sign-component__inner
                 .sign-component__tabs
                     .tab-button.active Sign In
                     .tab-button Sign Up
                 .sign-component__tab-content
                     form.sign-form.singin-form
-                        input#signInEmail.sign-form__input(type='email' placeholder='E-mail' required)
-                        input#signInPassword.sign-form__input(type='password' placeholder='password' required)
-                        input#signInSubmit.sign-form__button(type='submit' value='Sign In')
+                        input#signInEmail.sign-form__input(type='email' placeholder='Enter correct email address' required aria-required='true' aria-setsize='2' aria-posinset='1')
+                        input#signInPassword.sign-form__input(type='password' placeholder='Enter password' required aria-required='true' aria-setsize='2' aria-posinset='2')
+                        input#signInSubmit.sign-form__button(type='submit' value='Sign In' role='button')
                     form.sign-form.signup-form
-                        input#signUpEmail.sign-form__input(type='email' placeholder='E-mail' required)
-                        input#signUpPassword.sign-form__input(type='password' placeholder='password' required)
-                        input#signUpRePassword.sign-form__input(type='password' placeholder='repeat password' required)
-                        input#signUpSubmit.sign-form__button(type='submit' value='Sign Up')
-        footer.footer
+                        input#signUpEmail.sign-form__input(type='email' placeholder='E-mail' required aria-required='true' aria-setsize='3' aria-posinset='1')
+                        input#signUpPassword.sign-form__input(type='password' placeholder='Enter not less than 6 symbols' required aria-required='true' aria-setsize='3' aria-posinset='2')
+                        input#signUpRePassword.sign-form__input(type='password' placeholder='Repeat entered password' required aria-required='true' aria-setsize='3' aria-posinset='3')
+                        input#signUpSubmit.sign-form__button(type='submit' value='Sign Up' role='button')
+        footer.footer(tabindex='0')
             .footer__item.footer__contats
                 h3.footer__contacts-title Contact
                 .footer__contacts-items
@@ -146,21 +146,21 @@ body
             .footer__item.footer__social
                 .footer__social-row
                     a(href='#')
-                        img.footer__social-img(src='./assets/iconmonstr-facebook-3-icon-48.png' alt='')
+                        img.footer__social-img(src='./assets/iconmonstr-facebook-3-icon-48.png' alt='Author public facebook account')
                     a(href='#')
-                        img.footer__social-img(src='./assets/iconmonstr-youtube-3-icon-48.png' alt='')
+                        img.footer__social-img(src='./assets/iconmonstr-youtube-3-icon-48.png' alt='Author public youtube chanel')
                 .footer__social-row
                     a(href='#')
-                        img.footer__social-img(src='./assets/iconmonstr-twitter-3-icon-48.png' alt='')
+                        img.footer__social-img(src='./assets/iconmonstr-twitter-3-icon-48.png' alt='Author public twitter account')
                     a(href='#')
-                        img.footer__social-img(src='./assets/iconmonstr-google-plus-3-icon-48.png' alt='')
+                        img.footer__social-img(src='./assets/iconmonstr-google-plus-3-icon-48.png' alt='Author public email address')
             .footer__item.newsletter
                 h3.newsletter__title Newsletter
-                .newsletter__form
-                    input.newsletter__email-input(type='text' placeholder='Your email')
+                .newsletter__form(role='form')
+                    input.newsletter__email-input(type='text' placeholder='Enter your email address, please')
                     input.newsletter__button-submit(type='submit' value='Subscribe')
             .col-12.text-center.mb-1 Copyright &copy; 2010 Name | Design by Jakub Chynoradsk&yacute;
-        .modal-window
+        .modal-window(role='alert')
             .modal-window__content
                 p.modal-window__message
                 button.close-modal ok
