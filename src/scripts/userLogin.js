@@ -19,8 +19,9 @@ async function signInUser(e) {
 
 function signIn(email, password) {
     return firebase.auth().signInWithEmailAndPassword(email, password)
-        .then(() => {
+        .then(response => {
             notifyUser('Hi my dear)\nYou are successfully login');
+            console.dir(response);
             return true;
         })
         .catch(error => {

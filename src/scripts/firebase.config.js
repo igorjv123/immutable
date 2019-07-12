@@ -4,7 +4,7 @@ const firebaseConfig = {
     authDomain: "immutable-cb710.firebaseapp.com",
     databaseURL: "https://immutable-cb710.firebaseio.com",
     projectId: "immutable-cb710",
-    storageBucket: "",
+    storageBucket: "gs://immutable-cb710.appspot.com/",
     messagingSenderId: "866051381429",
     appId: "1:866051381429:web:30da06b1290b4a99"
 };

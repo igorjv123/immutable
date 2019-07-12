@@ -9,9 +9,9 @@ singUpForm.addEventListener('submit', singUpUser);
 
 async function singUpUser(e) {
     e.preventDefault();
-    signUpWithGoogle();
+    // signUpWithGoogle();
     // singUpWithFb();
-    return;
+    // return;
     const data = getSignUpData();
 
     if (data) {
@@ -47,7 +47,8 @@ function getSignUpData() {
 
 function signUp(email, password) {
     return firebase.auth().createUserWithEmailAndPassword(email, password)
-        .then(() => {
+        .then(response => {
+            console.dir(response);
             notifyUser('You are successfully sign in');
             return true;
         })
@@ -105,3 +106,22 @@ function singUpWithFb() {
             // ...
         });
 }
+
+function previewImageHandler(event) {
+    const file = event.target.files[0];
+
+    const reader = new FileReader();
+    reader.onload = () => {
+        const dataUrl = reader.result,
+            image = document.getElementById('photo-preview');
+        image.src = dataUrl;
+    };
+    reader.readAsDataURL(file);
+
+}
+
+function previewImageUpload() {
+    
+}
+
+document.getElementById('signUpImg').addEventListener('change', previewImageHandler);
