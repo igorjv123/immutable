@@ -11,11 +11,13 @@ import "firebase/firestore";
 
 import firebaseConfig from './scripts/firebase.config'
 
-firebase.initializeApp(firebaseConfig);
-
 import userLogin from './scripts/userLogin'
 import userRegistrarion from './scripts/userRegistrarion'
 import logout from './scripts/userSingOut'
+
+firebase.initializeApp(firebaseConfig);
+
+document.querySelector('.header__login').addEventListener('click', logout);
 
 (function () {
     firebase.auth().onAuthStateChanged(function(user) {

@@ -13,6 +13,4 @@ function logout() {
         });
 }
 
-document.querySelector('.header__login').addEventListener('click', logout);
-
 export default logout;
