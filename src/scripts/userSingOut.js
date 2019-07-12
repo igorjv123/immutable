@@ -1,5 +1,13 @@
 import * as firebase from "firebase/app";
 
+const regForm = document.querySelector('.header__login')
+
+regForm.addEventListener('click', showRegForm)
+
+function showRegForm() {
+    document.querySelector('.sign-component').classList.add('active-modal')
+}
+
 function logout() {
     firebase.auth().signOut()
         .then(response => {
@@ -14,5 +22,7 @@ function logout() {
 }
 
 document.querySelector('.header__login').addEventListener('click', logout);
+
+
 
 export default logout;

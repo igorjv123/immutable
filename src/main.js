@@ -16,6 +16,7 @@ firebase.initializeApp(firebaseConfig);
 import userLogin from './scripts/userLogin'
 import userRegistrarion from './scripts/userRegistrarion'
 import logout from './scripts/userSingOut'
+import './scripts/loginModal'
 
 (function () {
     firebase.auth().onAuthStateChanged(function(user) {

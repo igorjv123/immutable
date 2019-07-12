@@ -122,23 +122,6 @@ html(lang='en')
                     img.wrote-about-us__img(src='./assets/the-new-york-times-logo-vert.png' alt='')
                     img.wrote-about-us__img(src='./assets/2000px-The_Wall_Street_Journal_Logo.svg.png' alt='')
                     img.wrote-about-us__img(src='./assets/Mashable-Logo.png' alt='')
-            section.sign-component(tabindex='0')
-                .sign-component__inner
-                    .sign-component__tabs
-                        .tab-button.active Sign In
-                        .tab-button Sign Up
-                    .sign-component__tab-content
-                        form.sign-form.singin-form
-                            input#signInEmail.sign-form__input(type='email' placeholder='Enter correct email address' required aria-required='true')
-                            input#signInPassword.sign-form__input(type='password' placeholder='Enter password' required aria-required='true')
-                            input#signInSubmit.sign-form__button(type='submit' value='Sign In' role='button')
-                        form.sign-form.signup-form
-                            input#signUpEmail.sign-form__input(type='email' placeholder='E-mail' required aria-required='true' )
-                            input#signUpPassword.sign-form__input(type='password' placeholder='Enter not less than 6 symbols' required aria-required='true' )
-                            input#signUpRePassword.sign-form__input(type='password' placeholder='Repeat entered password' required aria-required='true')
-                            input#signUpImg.sign-form__input(type='file' accept="image/*" placeholder='Upload your photo' required aria-required='true')
-                            img#photo-preview.sing-form_img-preview
-                            input#signUpSubmit.sign-form__button(type='submit' value='Sign Up' role='button')
             footer.footer(tabindex='0')
                 .footer__item.footer__contats
                     h3.footer__contacts-title Contact
@@ -168,4 +151,21 @@ html(lang='en')
                     p.modal-window__message
                     button.close-modal ok
 
+            .sign-component(tabindex='0')
+                .sign-component__inner
+                    .sign-component__tabs
+                        .tab-button.active Sign In
+                        .tab-button Sign Up
+                    .sign-component__tab-content
+                        form.sign-form.singin-form
+                            input#signInEmail.sign-form__input(type='email' placeholder='Enter correct email address' required aria-required='true')
+                            input#signInPassword.sign-form__input(type='password' placeholder='Enter password' required aria-required='true')
+                            input#signInSubmit.sign-form__button(type='submit' value='Sign In' role='button')
+                        form.sign-form.signup-form
+                            input#signUpEmail.sign-form__input(type='email' placeholder='E-mail' required aria-required='true' )
+                            input#signUpPassword.sign-form__input(type='password' placeholder='Enter not less than 6 symbols' required aria-required='true' )
+                            input#signUpRePassword.sign-form__input(type='password' placeholder='Repeat entered password' required aria-required='true')
+                            input#signUpImg.sign-form__input(type='file' accept="image/*" placeholder='Upload your photo' required aria-required='true')
+                            img#photo-preview.sing-form_img-preview
+                            input#signUpSubmit.sign-form__button(type='submit' value='Sign Up' role='button')
 //+login(params)

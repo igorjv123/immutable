@@ -2,13 +2,17 @@
 @import 'mixins'
 
 .sign-component
-  display: flex
+  position: fixed
+  width: 100vw
+  height: 100vh
+  z-index: 1001
+  background: rgba(0,0,0, 0.5)
+  top: 0
+  left: 0
+  display: none
   flex-direction: column
   align-items: center
   justify-content: center
-  background: url("../assets/tab3.jpg")
-  background-size: cover
-  height: 400px
   padding: 20px 0
   &__inner
     background: #fff
