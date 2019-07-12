@@ -16,8 +16,8 @@
   padding: 20px 0
   &__inner
     background: #fff
-    height: 350px
-    width: 400px
+    min-height: 500px
+    width: 50%
     position: relative
     overflow: hidden
 
@@ -32,10 +32,9 @@
 
   &__tab-content
     display: flex
-    position: absolute
-    left: 0
-    transition: left 0.3s ease-out
     justify-content: center
+    align-items: center
+    padding: 10px 20px
 .tab-button
   padding: 10px
   width: 100px
@@ -49,7 +48,7 @@
   flex-direction: column
   align-items: center
   justify-content: center
-  min-height: available
+  min-height: 200px
   width: 400px
   &__input
     display: block
@@ -68,12 +67,25 @@
     color: $light-text
   &__button:hover
     background-color: darken($violet-color, 5%)
+  &__photo-wrapper
+    width: 300px
+    height: 300px
+    border: 2px solid #ccc
+    padding: 0
 
   &__img-preview
-    width: 100%
-    height: auto
-    max-height: 300px
+    width: 300px
+    height: 300px
+    
+    object-fit: cover
 
+.form-wrapper
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 10px 20px
+  display: none
 
-//input
-  //  margin-bottom: 20px
+.active-form
+  display: flex

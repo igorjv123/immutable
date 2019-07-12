@@ -11,17 +11,14 @@ function showRegForm() {
 function logout() {
     firebase.auth().signOut()
         .then(response => {
-            // Sign-out successful.
             console.log('Successful logout')
             console.dir(response);
         })
         .catch(error => {
-            // An error happened.
             console.warn(error);
         });
 }
 
-// document.querySelector('.header__login').addEventListener('click', logout);
 document.querySelector('.header__login').addEventListener('click', showRegForm);
 
 

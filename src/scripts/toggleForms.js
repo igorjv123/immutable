@@ -23,7 +23,11 @@ function changeTab({target}) {
 }
 
 function scrollForms(tabIndex) {
-    signContent.style.left = `${-tabIndex * 400}px`
+    const forms = document.querySelectorAll('.form-wrapper')
+    forms.forEach((form)=>{
+        form.classList.remove('active-form')
+    })
+    forms[tabIndex].classList.add('active-form')
 }
 
 function setActiveTab(tabList, target) {
