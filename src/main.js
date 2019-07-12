@@ -18,7 +18,7 @@ import './scripts/loginModal'
 
 firebase.initializeApp(firebaseConfig);
 
-document.querySelector('.header__login').addEventListener('click', logout);
+document.querySelector('.user-info__btn').addEventListener('click', logout);
 
 (function () {
     firebase.auth().onAuthStateChanged(function(user) {
@@ -26,9 +26,15 @@ document.querySelector('.header__login').addEventListener('click', logout);
             // User is signed in.
             console.log('Signed in');
             console.dir(user);
+            // show logout btn
+            document.querySelector('.user-info__btn').innerText = 'Login';
+            document.querySelector('.user-info__avatar').src = user.avatarURL;
         } else {
             // No user is signed in.'
             console.log("Already signed out");
+            // show login btn
+            // document.querySelector('.user-info__btn').innerText = 'Login';
         }
+        document.querySelector('.user-info').classList.add('show')
     });
 })();
