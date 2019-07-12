@@ -2,13 +2,17 @@ import * as firebase from "firebase";
 import resetForm from './resetForm'
 import notifyUser from './notifyUser'
 import showCorrectErrorMsg from './loginErrors'
+import logout from './userSingOut'
 
 const singUpForm = document.querySelector('.signup-form');
 
 singUpForm.addEventListener('submit', singUpUser);
 
+let imageUrl = null;
+
 async function singUpUser(e) {
     e.preventDefault();
+    logout();
     // signUpWithGoogle();
     // singUpWithFb();
     // return;
@@ -50,6 +54,9 @@ function signUp(email, password) {
         .then(response => {
             console.dir(response);
             notifyUser('You are successfully sign in');
+
+            updateUserAvatar(imageUrl);
+
             return true;
         })
         .catch(error => {
@@ -107,21 +114,59 @@ function singUpWithFb() {
         });
 }
 
-function previewImageHandler(event) {
+function handleImage(event) {
     const file = event.target.files[0];
 
+    createImagePreview(file);
+
+    imageUrl = uploadImage(file);
+
+    updateUserAvatar(imageUrl);
+}
+
+function createImagePreview(file) {
     const reader = new FileReader();
+
     reader.onload = () => {
-        const dataUrl = reader.result,
-            image = document.getElementById('photo-preview');
-        image.src = dataUrl;
+        const image = document.getElementById('photo-preview');
+
+        image.src = reader.result;
     };
+
     reader.readAsDataURL(file);
-
 }
 
-function previewImageUpload() {
-    
+function uploadImage(file) {
+    const storageRef = firebase.storage().ref(),
+        avatarsRef = storageRef.child('avatars');
+
+    avatarsRef.put(file)
+        .then(async (snapshot) => {
+            console.dir(snapshot);
+
+            return await snapshot.ref.getDownloadURL();
+        })
+        .catch(error => {
+            console.warn(error);
+        })
 }
 
-document.getElementById('signUpImg').addEventListener('change', previewImageHandler);
+function updateUserAvatar(url) {
+    const user = firebase.auth().currentUser;
+
+    if (user) {
+        user.updateProfile({
+            avatarURL: url,
+        })
+            .then(function () {
+                // Update successful.
+                console.log('Successful img upload');
+            })
+            .catch(function (error) {
+                // An error happened.
+                console.warn(error);
+            });
+    }
+}
+
+document.getElementById('signUpImg').addEventListener('change', handleImage);

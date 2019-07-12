@@ -21,8 +21,8 @@ function logout() {
         });
 }
 
-document.querySelector('.header__login').addEventListener('click', logout);
-
+// document.querySelector('.header__login').addEventListener('click', logout);
+document.querySelector('.header__login').addEventListener('click', showRegForm);
 
 
 export default logout;
