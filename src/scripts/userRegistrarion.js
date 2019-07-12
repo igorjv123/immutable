@@ -121,7 +121,7 @@ function handleImage(event) {
 
     imageUrl = uploadImage(file);
 
-    // if (user)
+    updateUserAvatar(imageUrl);
 }
 
 function createImagePreview(file) {
