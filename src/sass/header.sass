@@ -3,8 +3,9 @@
   height: 75px
   position: fixed
   top: 0
-  border-bottom: 1px solid black
-  background: linear-gradient(45deg, rgb(15, 16, 34), rgb(111, 30, 108))
+  //border-bottom: 1px solid black
+  background-color: rgba(0,0,0, 1)
+  //background: linear-gradient(45deg, rgb(15, 16, 34), rgb(111, 30, 108))
   opacity: 1
   z-index: 1000
   display: flex
@@ -27,16 +28,16 @@
   &__nav-link
     cursor: pointer
     text-decoration: none
-    color: blue
+    color: #fff
     font-size: 16px
 
 
     &::after
       content: ''
       width: 0
-      height: 1px
-      background-color: blue
-      top: 0
+      height: 2px
+      background-color: #fff
+      top: 3px
       left: 0
       float: left
       transition: width .3s
