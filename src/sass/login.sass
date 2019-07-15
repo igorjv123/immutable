@@ -17,13 +17,16 @@
   &__inner
     background: #fff
     min-height: 500px
+    min-width: 400px
     width: 50%
     position: relative
     overflow: hidden
+    padding: 20px
 
   &__tabs
     background-color: inherit
     display: flex
+
     justify-content: center
     cursor: pointer
     padding: 14px 16px
@@ -32,6 +35,7 @@
 
   &__tab-content
     display: flex
+    width: 100%
     justify-content: center
     align-items: center
     padding: 10px 20px
@@ -49,7 +53,7 @@
   align-items: center
   justify-content: center
   min-height: 200px
-  width: 400px
+  width: 300px
   &__input
     display: block
     padding: 10px
@@ -72,11 +76,11 @@
     height: 300px
     border: 2px solid #ccc
     padding: 0
+    margin: 10px
 
   &__img-preview
     width: 300px
     height: 300px
-    
     object-fit: cover
 
 .form-wrapper
@@ -86,6 +90,8 @@
   justify-content: center
   padding: 10px 20px
   display: none
+  flex-wrap: wrap
+
 
 .active-form
   display: flex

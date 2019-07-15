@@ -33,7 +33,7 @@ html(lang='en')
                         img.services-logo(src='./assets/googleplay.png' alt='Playmarket')
                         img.services-logo(src='./assets/available-on-the-app-store-badge.png' alt='AppStore')
             .container
-                section.app-features(id="app-features" tabindex='0')
+                section.app-features.line-after(id="app-features" tabindex='0')
                     .app-features__inner
                         .app-feature
                             img.app-feature__image(src='./assets/cloud.png' alt='cloud icon')
@@ -42,7 +42,7 @@ html(lang='en')
                             p.app-feature__description
                                 | Etiam rhoncus, metus vitae volutpat porta, risus dolor mollis nunc, sit amet maximus nunc
                                 | turpis vitae elit. Cras ac efficitur massa.
-                        .app-feature--center
+                        .app-feature.app-feature--center
                             img.app-feature__image(src='./assets/bell.png' alt='cloud icon')
                             h3.app-feature__header(role='heading' aria-level='3')
                                 | Notifications
@@ -56,71 +56,38 @@ html(lang='en')
                             p.app-feature__description
                                 | Vivamus vitae lectus sem. Vestibulum nec consequat lacus, nec fringilla urna.
                                 | Phasellus non bibendum leo. Mauris suscipit nisi ac commodo bibendum.
-                section.app-works.container__app-works(id='app-works' tabindex='0')
-                    .app-works__image-wrap
-                        img.app-works__image(src='./assets/hand-template.png' alt='iphone image with bridge picture')
-                    .app-works__item-container
-                        h2.app-works__header(role='heading' aria-level='2')
-                            | How our app works
-                        p.app-works__description
-                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            | ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            | laboris nisi ut aliquip.
-                        .app-function
-                            .app-function__image-wrap
-                                img.app-function__image(src='./assets/create-icon.png' alt='plus in circle')
-                            .app-function__text
-                                h4.app-function__header(role='heading' aria-level='3')
-                                    | Create
-                                p.app-function__description
-                                    | Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-                                    | Curae; Quisque augue odio, congue id turpis suscipit, mattis lacinia nulla.
-                        .app-function
-                            .app-function__image-wrap
-                                img.app-function__image(src='./assets/share-icon.png' alt='share icon')
-                            .app-function__text
-                                h4.app-function__header(role='heading' aria-level='3')
-                                    | Share
-                                p.app-function__description
-                                    | Vivamus vitae lectus sem. Vestibulum nec consequat lacus, nec fringilla urna.
-                                    | Phasellus non bibendum leo. Mauris suscipit nisi ac commodo bibendum.
 
-            //section.reviews-carousel.container-fluid
-            //    h1.review-header.text-center.w-100.text-light What people say about us?
-            //    #demo.container-fluid.carousel.slide(data-ride='carousel')
-            //        ol.carousel-indicators
-            //            li.active(data-target='#demo' data-slide-to='0')
-            //            li(data-target='#demo' data-slide-to='1')
-            //            li(data-target='#demo' data-slide-to='2')
-            //        .carousel-inner.d-flex.align-content-center
-            //            .carousel-item.active
-            //                img.d-block.w-100(src='./assets/tab1.jpg' alt='First slide')
-            //                .carousel-caption.d-md-block.h-100
-            //                    .review
-            //                        img.review-photo.d-block(src='./assets/128.jpg' alt='')
-            //                        p
-            //                            | Donec finibus mattis metus, eget finibus tortor porta in. Ut id imperdiet nibh. Morbi pretium fermentum lorem, quis mattis velit dictum et.
-            //            .carousel-item
-            //                img.d-block.w-100(src='./assets/tab2.jpg' alt='Second slide')
-            //                .carousel-caption.d-md-block.h-100
-            //                    .review
-            //                        img.review-photo.d-block(src='./assets/128.jpg' alt='')
-            //                        p
-            //                            | Donec finibus mattis metus, eget finibus tortor porta in. Ut id imperdiet nibh. Morbi pretium fermentum lorem, quis mattis velit dictum et.
-            //            .carousel-item
-            //                img.d-block.w-100(src='./assets/tab3.jpg' alt='Third slide')
-            //                .carousel-caption.d-md-block.h-100
-            //                    .review
-            //                        img.review-photo.d-block(src='./assets/128.jpg' alt='')
-            //                        p
-            //                            | Donec finibus mattis metus, eget finibus tortor porta in. Ut id imperdiet nibh. Morbi pretium fermentum lorem, quis mattis velit dictum et.
-            //        a.carousel-control-prev(href='#demo' role='button' data-slide='prev')
-            //            span.carousel-control-prev-icon(aria-hidden='true')
-            //            span.sr-only Previous
-            //        a.carousel-control-next(href='#demo' role='button' data-slide='next')
-            //            span.carousel-control-next-icon(aria-hidden='true')
-            //            span.sr-only Next
-            section.wrote-about-us(id='about-us' tabindex='0')
+                section.app-works.line-after(id='app-works' tabindex='0')
+                    .app-works__item-container
+                        img.app-works__image(src='./assets/hand-template.png' alt='iphone image with bridge picture')
+                        .app-works__image-wrap
+                            h2.app-works__header(role='heading' aria-level='2')
+                                | How our app works
+                            p.app-works__description
+                                | Lorem ipsum dolor sit samet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                | ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                | laboris nisi ut aliquip.
+                            .app-function
+                                .app-function__icon
+                                    img.app-function__image(src='./assets/create-icon.png' alt='plus in circle')
+                                .app-function__text
+                                    h4.app-function__header(role='heading' aria-level='3')
+                                        | Create
+                                    p.app-function__description
+                                        | Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+                                        | Curae; Quisque augue odio, congue id turpis suscipit, mattis lacinia nulla.
+                            .app-function
+                                .app-function__icon
+                                    img.app-function__image(src='./assets/share-icon.png' alt='share icon')
+                                .app-function__text
+                                    h4.app-function__header(role='heading' aria-level='3')
+                                        | Share
+                                    p.app-function__description
+                                        | Vivamus vitae lectus sem. Vestibulum nec consequat lacus, nec fringilla urna.
+                                        | Phasellus non bibendum leo. Mauris suscipit nisi ac commodo bibendum.
+
+
+            section.wrote-about-us.line-after(id='about-us' tabindex='0')
                 h1.wrote-about-us__title(role='heading' aria-level='2') Wrote about us
                 .wrote-about-us__images-container(role="img" aria-label="Logotypes of world famous companies")
                     img.wrote-about-us__img(src='./assets/Forbes_logo.svg.png' alt='Forbes international logotype')
