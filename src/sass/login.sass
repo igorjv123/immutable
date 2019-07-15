@@ -6,7 +6,7 @@
   width: 100vw
   height: 100vh
   z-index: 1001
-  background: rgba(0,0,0, 0.5)
+  background: rgba(0, 0, 0, 0.5)
   top: 0
   left: 0
   display: none
@@ -14,6 +14,7 @@
   align-items: center
   justify-content: center
   padding: 20px 0
+
   &__inner
     background: #fff
     min-height: 500px
@@ -22,6 +23,8 @@
     position: relative
     overflow: hidden
     padding: 20px
+    overflow-y: auto
+
 
   &__tabs
     background-color: inherit
@@ -39,10 +42,15 @@
     justify-content: center
     align-items: center
     padding: 10px 20px
+
 .tab-button
   padding: 10px
   width: 100px
   text-align: center
+
+.form-wrapper
+  display: none
+
 .active
   background-color: $violet-color
   color: #fff
@@ -53,7 +61,7 @@
   align-items: center
   justify-content: center
   min-height: 200px
-  width: 300px
+
   &__input
     display: block
     padding: 10px
@@ -61,6 +69,7 @@
     border-radius: 3px
     margin-bottom: 20px
     width: 250px
+
   &__button
     border: none
     outline: none
@@ -69,29 +78,42 @@
     padding: 5px 20px
     background-color: $violet-color
     color: $light-text
+
   &__button:hover
     background-color: darken($violet-color, 5%)
+
   &__photo-wrapper
-    width: 300px
-    height: 300px
+    width: 250px
+    height: 250px
     border: 2px solid #ccc
-    padding: 0
-    margin: 10px
 
   &__img-preview
-    width: 300px
-    height: 300px
+    width: 250px
+    height: 250px
     object-fit: cover
 
-.form-wrapper
+.form-inner-container
   width: 100%
   display: flex
   align-items: center
-  justify-content: center
-  padding: 10px 20px
-  display: none
   flex-wrap: wrap
-
+  justify-content: center
 
 .active-form
   display: flex
+
+.inputs-container
+  padding: 30px 20px 20px 20px
+
+.sign-up-social
+  height: 40px
+  width: 40px
+  object-fit: cover
+  padding: 0 10px 20px 10px
+  cursor: pointer
+
+.buttons-container
+  display: flex
+  flex-direction: column
+  align-items: center
+

@@ -12,12 +12,16 @@
                     input#signInSubmit.sign-form__button(type='submit' value='Sign In' role='button')
             .form-wrapper
                 form.sign-form.signup-form
-                    input#signUpEmail.sign-form__input(type='email' placeholder='E-mail' required aria-required='true' )
-                    input#signUpPassword.sign-form__input(type='password' placeholder='Enter not less than 6 symbols' required aria-required='true' )
-                    input#signUpRePassword.sign-form__input(type='password' placeholder='Repeat entered password' required aria-required='true')
-                    input#signUpImg.sign-form__input(type='file' accept="image/*" placeholder='Upload your photo' required aria-required='true')
-                    button#singUpWithFb(type='button') Facebook
-                    button#singUpWithGoogle(type='button') Google
-                    input#signUpSubmit.sign-form__button(type='submit' value='Sign Up' role='button')
-                div.sign-form__photo-wrapper
-                    img#photo-preview.sign-form__img-preview
+                    .form-inner-container
+                        .inputs-container
+                            input#signUpEmail.sign-form__input(type='email' placeholder='E-mail' required aria-required='true' )
+                            input#signUpPassword.sign-form__input(type='password' placeholder='Enter not less than 6 symbols' required aria-required='true' )
+                            input#signUpRePassword.sign-form__input(type='password' placeholder='Repeat entered password' required aria-required='true')
+                            input#signUpImg.sign-form__input(type='file' accept="image/*" placeholder='Upload your photo' required aria-required='true')
+                        div.sign-form__photo-wrapper
+                            img#photo-preview.sign-form__img-preview
+                    .buttons-container
+                        .form-inner-container
+                            img#singUpWithFb.sign-up-social(src='./assets/facebook-icon.png')
+                            img#singUpWithGoogle.sign-up-social(src='./assets/google-icon.png')
+                        input#signUpSubmit.sign-form__button(type='submit' value='Sign Up' role='button')
