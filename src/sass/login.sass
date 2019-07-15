@@ -25,7 +25,6 @@
     padding: 20px
     overflow-y: auto
 
-
   &__tabs
     background-color: inherit
     display: flex
@@ -117,3 +116,24 @@
   flex-direction: column
   align-items: center
 
+.close
+  position: absolute
+  right: 10px
+  top: 10px
+  width: 32px
+  height: 32px
+  opacity: 0.3
+  &:hover
+    opacity: 1
+    cursor: pointer
+  &:before, &:after
+    position: absolute
+    left: 15px
+    content: ' '
+    height: 33px
+    width: 2px
+    background-color: #333
+  &:before
+    transform: rotate(45deg)
+  &:after
+    transform: rotate(-45deg)
