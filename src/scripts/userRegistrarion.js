@@ -12,7 +12,7 @@ let imageUrl = null;
 
 async function singUpUser(e) {
     e.preventDefault();
-    logout();
+    // logout();
     // signUpWithGoogle();
     // singUpWithFb();
     // return;
@@ -28,17 +28,24 @@ async function singUpUser(e) {
         } else if (await signUp(email, password)) {
             resetForm();
         }
+    } else {
+        console.warn('Failed to read your data')
     }
 }
 
 function isPasswordsEqual(pass1, pass2) {
     return pass1 === pass2;
+
 }
 
 function getSignUpData() {
-    const email = document.querySelectorAll('#signUpEmail').value,
-        password = document.querySelectorAll('#signUpPassword').value,
-        confirmPassword = document.querySelectorAll('#signUpRePassword').value;
+    const email = document.querySelector('#signUpEmail').value,
+        password = document.querySelector('#signUpPassword').value,
+        confirmPassword = document.querySelector('#signUpRePassword').value;
+
+    console.log(email)
+    console.log(password)
+    console.log(confirmPassword)
 
     if (email && password && confirmPassword) {
         return {
@@ -156,7 +163,7 @@ function updateUserAvatar(url) {
 
     if (user) {
         user.updateProfile({
-            avatarURL: url,
+            photoURL: url,
         })
             .then(function () {
                 // Update successful.

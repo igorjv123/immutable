@@ -1,6 +1,6 @@
 import * as firebase from "firebase/app";
 
-const regForm = document.querySelector('.header__login')
+const regForm = document.querySelector('.user-info__btn')
 
 regForm.addEventListener('click', showRegForm)
 
@@ -19,7 +19,7 @@ function logout() {
         });
 }
 
-document.querySelector('.header__login').addEventListener('click', showRegForm);
+document.querySelector('.user-info__btn').addEventListener('click', showRegForm);
 
 
 export default logout;

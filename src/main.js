@@ -28,7 +28,7 @@ document.querySelector('.user-info__btn').addEventListener('click', logout);
             console.dir(user);
             // show logout btn
             document.querySelector('.user-info__btn').innerText = 'Login';
-            document.querySelector('.user-info__avatar').src = user.avatarURL;
+            document.querySelector('.user-info__avatar').src = user.photoURL;
         } else {
             // No user is signed in.'
             console.log("Already signed out");
