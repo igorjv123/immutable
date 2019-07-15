@@ -72,6 +72,9 @@ function signUp(email, password) {
         });
 }
 
+document.getElementById('singUpWithFb').addEventListener('click', signUpWithFb);
+document.getElementById('singUpWithGoogle').addEventListener('click', signUpWithGoogle);
+
 function signUpWithGoogle() {
     var provider = new firebase.auth.GoogleAuthProvider();
     provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
@@ -97,9 +100,9 @@ function signUpWithGoogle() {
         });
 }
 
-function singUpWithFb() {
+function signUpWithFb() {
     var provider = new firebase.auth.FacebookAuthProvider();
-    provider.addScope('user_birthday');
+    // provider.addScope('user_birthday');
     firebase.auth().signInWithPopup(provider)
         .then(function (result) {
             // This gives you a Facebook Access Token. You can use it to access the Facebook API.
