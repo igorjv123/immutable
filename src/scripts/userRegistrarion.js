@@ -1,6 +1,6 @@
 import * as firebase from "firebase";
 import resetForm from './resetForm'
-import notifyUser from './notifyUser'
+import notifyPopup from './notifyPopup'
 import showCorrectErrorMsg from './loginErrors'
 import logout from './userSingOut'
 
@@ -22,7 +22,7 @@ async function singUpUser(e) {
         console.log(password, confirmPassword);
 
         if (!isPasswordsEqual(password, confirmPassword)) {
-            notifyUser('Your passwords dont match');
+            notifyPopup('Your passwords dont match');
         } else if (await signUp(email, password)) {
             resetForm();
         }
@@ -58,7 +58,7 @@ function signUp(email, password) {
     return firebase.auth().createUserWithEmailAndPassword(email, password)
         .then(response => {
             console.dir(response);
-            notifyUser('You are successfully sign in');
+            notifyPopup('You are successfully sign in');
 
             updateUserAvatar(imageUrl);
 

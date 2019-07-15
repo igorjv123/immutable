@@ -1,11 +1,11 @@
-import notifyUser from './notifyUser'
+import notifyPopup from './notifyPopup'
 import {changeTab} from './toggleForms'
 
-const INVALID_EMAIL = 'auth/invalid-email',
-      WRONG_PASSWORD = 'auth/wrong-password',
-      EMAIL_IN_USE = 'auth/email-already-in-use',
-      USER_NOT_FOUND = 'auth/user-not-found',
-      WEEK_PASSWORD='auth/weak-password';
+const   INVALID_EMAIL = 'auth/invalid-email',
+        WRONG_PASSWORD = 'auth/wrong-password',
+        EMAIL_IN_USE = 'auth/email-already-in-use',
+        USER_NOT_FOUND = 'auth/user-not-found',
+        WEEK_PASSWORD = 'auth/weak-password';
 
 function showCorrectErrorMsg(errorCode) {
     switch (errorCode) {
@@ -25,12 +25,12 @@ function showCorrectErrorMsg(errorCode) {
             handleWeekPassword();
             break;
         default:
-            notifyUser('Something went wrong. \nPlease try again');
+            notifyPopup('Something went wrong. \nPlease try again');
     }
 }
 
 function handleWeekPassword() {
-    notifyUser('Your password is week\nPlease, select another one');
+    notifyPopup('Your password is week\nPlease, select another one');
 }
 
 function emailIsInUse() {
@@ -45,15 +45,15 @@ function emailIsInUse() {
 }
 
 function createNewUser() {
-    notifyUser('User with this email wasn`t found\nTry to sign up firstly');
+    notifyPopup('User with this email wasn`t found\nTry to sign up firstly');
 }
 
 function handleWrongEmail() {
-    notifyUser('You have entered invalid email\nTry again');
+    notifyPopup('You have entered invalid email\nTry again');
 }
 
 function handleWrongPassword() {
-    notifyUser('You entered wrong password');
+    notifyPopup('You entered wrong password');
     // TODO add error text under input
 }
 

@@ -1,7 +1,7 @@
 import * as firebase from "firebase";
 import resetForm from './resetForm'
 import showCorrectErrorMsg from './loginErrors'
-import notifyUser from './notifyUser'
+import notifyPopup from './notifyPopup'
 
 async function signInUser(e) {
     e.preventDefault();
@@ -16,7 +16,7 @@ async function signInUser(e) {
 function signIn(email, password) {
     return firebase.auth().signInWithEmailAndPassword(email, password)
         .then(response => {
-            notifyUser('Hi my dear)\nYou are successfully login');
+            notifyPopup('Hi my dear)\nYou are successfully login');
             console.dir(response);
             return true;
         })

@@ -1,5 +1,3 @@
-
-
 import './sass/style.sass';
 
 // import firebaseConfig from './scripts/firebase.config'
@@ -22,9 +20,10 @@ import {initUserLogin} from "./scripts/userLogin";
 import {initUserRegistrarion} from "./scripts/userRegistrarion";
 
 import Login from './components/login/login'
+// init form
+const login = new Login();
+login.init();
 
-const l = new Login();
-l.init();
 firebase.initializeApp(firebaseConfig);
 
 document.querySelector('.user-info__btn').addEventListener('click', logout);
@@ -33,4 +32,6 @@ initToggleForms();
 initUserLogin();
 initUserRegistrarion();
 initUser();
+
+
 
