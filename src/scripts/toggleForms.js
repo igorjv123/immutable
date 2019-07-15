@@ -6,7 +6,6 @@ const tabList = document.querySelectorAll('.tab-button'),
     inputsList = document.querySelectorAll('sign-form__input'),
     inputs = Array.prototype.slice.call(inputsList);
 
-signComponent.addEventListener('click', changeTab)
 
 // signComponent.addEventListener('input', ({target}) => {
 //     console.log(target)
@@ -14,8 +13,10 @@ signComponent.addEventListener('click', changeTab)
 
 function changeTab({target}) {
     console.log(target);
+    const tabList = document.querySelectorAll('.tab-button'),
+        tabButtons = Array.prototype.slice.call(tabList);
     if (target.classList.contains('tab-button')) {
-        scrollForms(tabButtons.indexOf(target))
+        scrollForms(tabButtons.indexOf(target));
 
         setActiveTab(tabList, target)
     }
@@ -37,4 +38,9 @@ function setActiveTab(tabList, target) {
     target.classList.add('active')
 }
 
-export {changeTab};
+function initToggleForms() {
+    const signComponent = document.querySelector('.sign-component__inner');
+    signComponent.addEventListener('click', changeTab);
+}
+
+export {changeTab, initToggleForms};

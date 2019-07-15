@@ -6,8 +6,6 @@ import logout from './userSingOut'
 
 const singUpForm = document.querySelector('.signup-form');
 
-singUpForm.addEventListener('submit', singUpUser);
-
 let imageUrl = null;
 
 async function singUpUser(e) {
@@ -71,9 +69,6 @@ function signUp(email, password) {
             return false;
         });
 }
-
-document.getElementById('singUpWithFb').addEventListener('click', signUpWithFb);
-document.getElementById('singUpWithGoogle').addEventListener('click', signUpWithGoogle);
 
 function signUpWithGoogle() {
     var provider = new firebase.auth.GoogleAuthProvider();
@@ -179,4 +174,13 @@ function updateUserAvatar(url) {
     }
 }
 
-document.getElementById('signUpImg').addEventListener('change', handleImage);
+function initUserRegistrarion() {
+    document.getElementById('signUpImg').addEventListener('change', handleImage);
+    document.querySelector('.signup-form').addEventListener('submit', singUpUser);
+
+    document.getElementById('singUpWithFb').addEventListener('click', signUpWithFb);
+    document.getElementById('singUpWithGoogle').addEventListener('click', signUpWithGoogle);
+
+}
+
+export {initUserRegistrarion};

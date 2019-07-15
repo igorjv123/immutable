@@ -3,10 +3,6 @@ import resetForm from './resetForm'
 import showCorrectErrorMsg from './loginErrors'
 import notifyUser from './notifyUser'
 
-const singInForm = document.querySelector('.singin-form');
-
-singInForm.addEventListener('submit', signInUser);
-
 async function signInUser(e) {
     e.preventDefault();
 
@@ -45,3 +41,10 @@ function getSignInData() {
 
     return null;
 }
+
+function initUserLogin() {
+    const singInForm = document.querySelector('.singin-form');
+    singInForm.addEventListener('submit', signInUser);
+}
+
+export {initUserLogin};
