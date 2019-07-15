@@ -30,7 +30,6 @@ document.querySelector('.user-info__btn').addEventListener('click', logout);
             document.querySelector('.user-info__btn').innerText = 'Logout';
             document.querySelector('.user-info__avatar').src = user.photoURL;
 
-            document.querySelector('.user-info__sign-in').classList.remove('hide');
             document.querySelector('.user-info__sign-in').classList.add('show');
 
         } else {
@@ -41,7 +40,6 @@ document.querySelector('.user-info__btn').addEventListener('click', logout);
             document.querySelector('.user-info__avatar').classList.remove('user-signed');
 
             document.querySelector('.user-info__sign-in').classList.remove('show');
-            document.querySelector('.user-info__sign-in').classList.add('hide');
         }
         document.querySelector('.user-info').classList.add('show')
     });
