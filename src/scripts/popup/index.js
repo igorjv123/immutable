@@ -1,3 +1,4 @@
+import $ from "jquery";
 class Popup {
     constructor(root) {
         if (new.target === Popup) {
@@ -19,7 +20,7 @@ class Popup {
     }
 
     hide({target}) {
-        if (target.classList.contains('sign-component')) {
+        if (target.classList.contains('sign-component') || target.classList.contains('close')) {
             this.root.classList.remove('active-modal');
         }
     }
