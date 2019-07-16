@@ -30,7 +30,10 @@ html(lang='en')
                     h1.light-text.white(role='heading' aria-level='1') Lorem ipsum dolor sit amet, consectetur
                     img.iphone-6-mockup.col-lg-5(src='./assets/iphone_6_mockup.png' alt='iphone')
                     .first-view__services
-                        img.services-logo(src='./assets/googleplay.png' alt='Playmarket')
+                        img.services-logo(srcset="./assets/googleplay-320.png 320w, ./assets/googleplay-480.png 480w, ./assets/googleplay-800.png 800w"
+                            sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px"
+                            src='./assets/googleplay.png'
+                            alt='Playmarket')
                         img.services-logo(src='./assets/available-on-the-app-store-badge.png' alt='AppStore')
             .container
                 section.app-features.line-after(id="app-features" tabindex='0')
