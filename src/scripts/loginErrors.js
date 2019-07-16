@@ -38,9 +38,9 @@ function emailIsInUse() {
 
     if (flag) {
         //switch tabs, but save entered data?
-        const loginBtn = document.querySelector('.tab-button');
+        const $loginBtn = $('.tab-button');
 
-        changeTab({target: loginBtn});
+        changeTab({target: $loginBtn});
     }
 }
 

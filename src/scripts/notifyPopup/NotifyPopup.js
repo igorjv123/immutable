@@ -1,15 +1,16 @@
 import Popup from '../popup'
 
-class NotifyPopup extends Popup{
+class NotifyPopup extends Popup {
     constructor() {
         const root = document.querySelector('.modal-window');
+        console.log(root)
         super(root);
         this.textElem = document.querySelector('.modal-window__message');
     }
 
-    // init() {
-    //     this.root.addEventListener('click', this.hide.bind(this));
-    // }
+    init() {
+        this.root.addEventListener('click', this.hide.bind(this));
+    }
 
     show(msg) {
         this.textElem.innerText = msg;
@@ -17,8 +18,11 @@ class NotifyPopup extends Popup{
     }
 
     hide({target}) {
-        console.log('Hide');
-        if (target.classList.contains('modal-window') || target.className === 'close-modal') {
+        console.log(target);
+        if (target.classList.contains('modal-window')
+            || target.classList.contains('close')
+            || target.classList.contains('close-modal')) {
+
             this.root.classList.remove('active-modal');
         }
     }

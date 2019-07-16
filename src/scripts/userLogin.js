@@ -3,6 +3,7 @@ import resetForm from './resetForm'
 import showCorrectErrorMsg from './loginErrors'
 import notifyPopup from './notifyPopup'
 
+
 async function signInUser(e) {
     e.preventDefault();
 
@@ -29,8 +30,8 @@ function signIn(email, password) {
 }
 
 function getSignInData() {
-    const email = document.getElementById('signInEmail').value,
-          password = document.getElementById('signInPassword').value;
+    const email = $("#signInEmail").val(),
+          password = $('#signInPassword').val();
 
     if (email && password) {
         return {
@@ -43,8 +44,7 @@ function getSignInData() {
 }
 
 function initUserLogin() {
-    const singInForm = document.querySelector('.singin-form');
-    singInForm.addEventListener('submit', signInUser);
+    $('.singin-form').submit(signInUser);
 }
 
 export {initUserLogin};

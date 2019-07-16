@@ -1,4 +1,3 @@
-import $ from "jquery";
 class Popup {
     constructor(root) {
         if (new.target === Popup) {
@@ -11,17 +10,18 @@ class Popup {
 
     init() {
         // const registrationComponent = document.querySelector('.sign-component');
-        this.root.addEventListener('click', this.hide.bind(this));
+        this.root.click(this.hide.bind(this));
     }
 
-    show({target}) {
+    show() {
         // target.classList.add('active-modal')
-        this.root.classList.add('active-modal')
+        this.root.addClass('active-modal')
     }
 
     hide({target}) {
+        console.log(target)
         if (target.classList.contains('sign-component') || target.classList.contains('close')) {
-            this.root.classList.remove('active-modal');
+            this.root.removeClass('active-modal');
         }
     }
 }

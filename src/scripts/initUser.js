@@ -7,21 +7,21 @@ function initUser() {
             console.log('Signed in');
             console.dir(user);
             // show logout btn
-            document.querySelector('.user-info__btn').innerText = 'Logout';
-            document.querySelector('.user-info__avatar').src = user.photoURL;
+            $('.user-info__btn').text('Logout');
+            $('.user-info__avatar').attr('src', user.photoURL);
 
-            document.querySelector('.user-info__sign-in').classList.add('show');
+            $('.user-info__sign-in').addClass('show');
 
         } else {
             // No user is signed in.'
             console.log("Already signed out");
             // show login btn
-            document.querySelector('.user-info__btn').innerText = 'Login';
-            document.querySelector('.user-info__avatar').classList.remove('user-signed');
+            $('.user-info__btn').text('Login') ;
+            $('.user-info__avatar').removeClass('user-signed');
 
-            document.querySelector('.user-info__sign-in').classList.remove('show');
+            $('.user-info__sign-in').removeClass('show');
         }
-        document.querySelector('.user-info').classList.add('show')
+        $('.user-info').addClass('show')
     });
 }
 

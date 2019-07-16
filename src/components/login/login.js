@@ -4,10 +4,10 @@ import Popup from '../../scripts/popup'
 
 class Login extends Popup {
     constructor() {
-        console.log('HELLO');
-        const popup = document.getElementById('popup');
-        popup.innerHTML = pugHtml();
-        const rootElem = document.querySelector('.sign-component');
+        const pug = pugHtml()
+
+        $('#popup').html(pug)
+        const rootElem =  $('.sign-component')
         // have to call super after insertion pug component into html
         super(rootElem);
     }

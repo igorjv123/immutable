@@ -6,7 +6,7 @@ import * as firebase from "firebase/app";
 
 import "firebase/auth";
 import "firebase/firestore";
-
+import $ from "jquery";
 import firebaseConfig from './scripts/firebase.config'
 
 import userLogin from './scripts/userLogin'
@@ -20,6 +20,9 @@ import {initUserLogin} from "./scripts/userLogin";
 import {initUserRegistrarion} from "./scripts/userRegistrarion";
 
 import Login from './components/login/login'
+
+window.$ = $;
+
 // init form
 const login = new Login();
 login.init();
@@ -32,6 +35,4 @@ initToggleForms();
 initUserLogin();
 initUserRegistrarion();
 initUser();
-
-
 
