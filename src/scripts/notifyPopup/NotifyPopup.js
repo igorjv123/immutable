@@ -1,20 +1,17 @@
 import Popup from '../popup'
+import $ from "jquery";
 
 class NotifyPopup extends Popup {
     constructor() {
-        const root = document.querySelector('.modal-window');
-        console.log(root)
-        super(root);
-        this.textElem = document.querySelector('.modal-window__message');
-    }
-
-    init() {
-        this.root.addEventListener('click', this.hide.bind(this));
+        const $root = $('.modal-window');
+        console.log($root)
+        super($root);
+        this.$textElem = $('.modal-window__message');
     }
 
     show(msg) {
-        this.textElem.innerText = msg;
-        this.root.classList.add('active-modal');
+        this.$textElem.text(msg);
+        this.$root.addClass('active-modal');
     }
 
     hide({target}) {
@@ -23,7 +20,7 @@ class NotifyPopup extends Popup {
             || target.classList.contains('close')
             || target.classList.contains('close-modal')) {
 
-            this.root.classList.remove('active-modal');
+            this.$root.removeClass('active-modal');
         }
     }
 

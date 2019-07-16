@@ -1,5 +1,5 @@
 function resetForm() {
-    const inputs = document.querySelectorAll('.sign-form__input');
+    const inputs = $('.sign-form__input');
 
     inputs.forEach(input => {
         input.value = '';

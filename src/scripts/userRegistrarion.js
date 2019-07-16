@@ -3,8 +3,9 @@ import resetForm from './resetForm'
 import notifyPopup from './notifyPopup'
 import showCorrectErrorMsg from './loginErrors'
 import logout from './userSingOut'
+import $ from "jquery";
 
-const singUpForm = document.querySelector('.signup-form');
+// const singUpForm = $('.signup-form');
 
 let imageUrl = null;
 
@@ -37,9 +38,9 @@ function isPasswordsEqual(pass1, pass2) {
 }
 
 function getSignUpData() {
-    const email = document.querySelector('#signUpEmail').value,
-        password = document.querySelector('#signUpPassword').value,
-        confirmPassword = document.querySelector('#signUpRePassword').value;
+    const email = $('#signUpEmail').val,
+        password = $('#signUpPassword').val,
+        confirmPassword = $('#signUpRePassword').val;
 
     console.log(email)
     console.log(password)
@@ -133,9 +134,9 @@ function createImagePreview(file) {
     const reader = new FileReader();
 
     reader.onload = () => {
-        const image = document.getElementById('photo-preview');
+        const $ = $('#photo-preview');
 
-        image.src = reader.result;
+        $image.attr('src', reader.result);
     };
 
     reader.readAsDataURL(file);
@@ -175,11 +176,11 @@ function updateUserAvatar(url) {
 }
 
 function initUserRegistrarion() {
-    document.getElementById('signUpImg').addEventListener('change', handleImage);
-    document.querySelector('.signup-form').addEventListener('submit', singUpUser);
+    $('#signUpImg').change(handleImage);
+    $('.signup-form').submit(singUpUser);
 
-    document.getElementById('singUpWithFb').addEventListener('click', signUpWithFb);
-    document.getElementById('singUpWithGoogle').addEventListener('click', signUpWithGoogle);
+    $('#singUpWithFb').click(signUpWithFb);
+    $('#singUpWithGoogle').click(signUpWithGoogle);
 
 }
 
