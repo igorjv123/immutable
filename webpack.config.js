@@ -1,3 +1,5 @@
+// import '@babel/polyfill';
+
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -7,9 +9,8 @@ const autoprefixer = require("autoprefixer");
 const webpack = require("webpack");
 
 var config = {
-    entry: {
-        main: './src/main.js'
-    },
+    entry: './src/main.js',
+    mode: 'development',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'main.js'
@@ -18,10 +19,13 @@ var config = {
 
         rules: [
             {
-                test: /\.js$/,
-                exclude: /node_modules/,
+                test: /\.m?js$/,
+                exclude: /(node_modules|bower_components)/,
                 use: {
-                    loader: "babel-loader"
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
                 }
             },
             {
@@ -59,7 +63,7 @@ var config = {
             filename: 'index.html'
         }),
         new CopyPlugin([
-            { from: 'src/assets', to: 'assets' },
+            {from: 'src/assets', to: 'assets'},
         ]),
         new webpack.LoaderOptionsPlugin({
             options: {
