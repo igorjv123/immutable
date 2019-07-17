@@ -1,5 +1,5 @@
 import * as firebase from "firebase/app";
-
+import {InitUserObserver, InitUserObservable} from './InitUserObserver'
 
 
 function initUser() {
