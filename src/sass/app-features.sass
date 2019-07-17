@@ -46,3 +46,21 @@
     font-weight: 400
     line-height: 1.2em
     text-align: center
+
+.lazy-load
+  transform: scale(.75) translateY(3.2rem)
+  opacity: .3
+
+@keyframes boom
+  0%
+    transform: scale(0.75) translateY(3.2rem)
+    opacity: .3
+
+  100%
+    transform: none
+    opacity: 1
+
+.visible
+  animation-name: boom
+  animation-duration: 500ms
+  animation-fill-mode: both

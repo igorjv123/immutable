@@ -23,7 +23,6 @@ import Login from './components/login/login'
 
 window.$ = $;
 
-// init form
 const login = new Login();
 login.init();
 
@@ -31,8 +30,30 @@ firebase.initializeApp(firebaseConfig);
 
 document.querySelector('.user-info__btn').addEventListener('click', logout);
 
+
 initToggleForms();
 initUserLogin();
 initUserRegistrarion();
 initUser();
+
+function onEntry(entry) {
+    entry.forEach((change) => {
+        if(change.isIntersecting) {
+            change.target.classList.add('visible');
+        }
+    });
+}
+
+let options = {
+    threshold: [0.5]
+};
+
+let observer = new IntersectionObserver(onEntry, options);
+
+let elements = document.querySelectorAll('.lazy-load');
+
+
+for (let elm of elements) {
+    observer.observe(elm);
+}
 

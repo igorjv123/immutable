@@ -45,7 +45,7 @@ html(lang='en')
                         //    alt='Playmarket')
                         //img.services-logo(src='./assets/available-on-the-app-store-badge.png' alt='AppStore')
             .container
-                section.app-features.line-after(id="app-features" tabindex='0')
+                section.app-features.line-after.lazy-load(id="app-features" tabindex='0')
                     .app-features__inner
                         .app-feature
                             img.app-feature__image(src='./assets/cloud.png' alt='cloud icon')
@@ -69,7 +69,7 @@ html(lang='en')
                                 | Vivamus vitae lectus sem. Vestibulum nec consequat lacus, nec fringilla urna.
                                 | Phasellus non bibendum leo. Mauris suscipit nisi ac commodo bibendum.
 
-                section.app-works.line-after(id='app-works' tabindex='0')
+                section.app-works.line-after.lazy-load(id='app-works' tabindex='0')
                     .app-works__item-container
                         img.app-works__image(src='./assets/hand-template.png' alt='iphone image with bridge picture')
                         .app-works__image-wrap
@@ -99,14 +99,14 @@ html(lang='en')
                                         | Phasellus non bibendum leo. Mauris suscipit nisi ac commodo bibendum.
 
 
-            section.wrote-about-us.line-after(id='about-us' tabindex='0')
+            section.wrote-about-us.line-after.lazy-load(id='about-us' tabindex='0')
                 h1.wrote-about-us__title(role='heading' aria-level='2') Wrote about us
                 .wrote-about-us__images-container(role="img" aria-label="Logotypes of world famous companies")
                     img.wrote-about-us__img(src='./assets/Forbes_logo.svg.png' alt='Forbes international logotype')
                     img.wrote-about-us__img(src='./assets/the-new-york-times-logo-vert.png' alt='')
                     img.wrote-about-us__img(src='./assets/2000px-The_Wall_Street_Journal_Logo.svg.png' alt='')
                     img.wrote-about-us__img(src='./assets/Mashable-Logo.png' alt='')
-            footer.footer(tabindex='0')
+            footer.footer.lazy-load(tabindex='0')
                 .footer__item.footer__contats
                     h3.footer__contacts-title Contact
                     .footer__contacts-items
