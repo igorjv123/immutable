@@ -1,13 +1,15 @@
 export class InitUserObservable {
-    constructor(){
+    constructor() {
         this._observers = []
     }
-    set addObserver(observer){
+
+    addObserver(observer) {
         this._observers.push(observer);
     }
 
     notify(msg) {
-        this._observers.forEach((observer)=>{
+        console.log(msg)
+        this._observers.forEach((observer) => {
             observer.notify(msg);
         })
     }
@@ -15,13 +17,14 @@ export class InitUserObservable {
 }
 
 export class InitUserObserver {
-    constructor(behavior){
+    constructor(behavior) {
         this._behavior = behavior || null;
     }
 
-    notify(msg){
+    notify(msg) {
         this._behavior(msg)
     }
+
     set behavior(func) {
         this._behavior = func;
     }

@@ -1,4 +1,5 @@
-import * as firebase from "firebase";
+import 'babel-polyfill';
+import * as firebase from "firebase/app";
 import resetForm from './resetForm'
 import notifyPopup from './notifyPopup'
 import showCorrectErrorMsg from './loginErrors'
@@ -38,10 +39,9 @@ function isPasswordsEqual(pass1, pass2) {
 }
 
 function getSignUpData() {
-    const email = $('#signUpEmail').val,
-        password = $('#signUpPassword').val,
-        confirmPassword = $('#signUpRePassword').val;
-
+    const email = $('#signUpEmail').val(),
+        password = $('#signUpPassword').val(),
+        confirmPassword = $('#signUpRePassword').val();
     console.log(email)
     console.log(password)
     console.log(confirmPassword)
@@ -134,7 +134,8 @@ function createImagePreview(file) {
     const reader = new FileReader();
 
     reader.onload = () => {
-        const $ = $('#photo-preview');
+        const $image = $('#photo-preview');
+        console.log($image)
 
         $image.attr('src', reader.result);
     };
@@ -144,8 +145,8 @@ function createImagePreview(file) {
 
 function uploadImage(file) {
     const storageRef = firebase.storage().ref(),
-        avatarsRef = storageRef.child('avatars');
-
+        avatarsRef = storageRef.child('avatarssdfds');
+// debugger;
     avatarsRef.put(file)
         .then(async (snapshot) => {
             console.dir(snapshot);
