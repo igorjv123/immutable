@@ -1,5 +1,7 @@
 import * as firebase from "firebase/app";
 
+
+
 function initUser() {
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
