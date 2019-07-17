@@ -1,15 +1,16 @@
+// import '@babel/polyfill';
+
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-require("@babel/polyfill");
-require("@babel/plugin-proposal-object-rest-spread")
+
 const autoprefixer = require("autoprefixer");
 const webpack = require("webpack");
 
 var config = {
     entry: {
-        main: ["@babel/polyfill", './src/main.js']
+        main: './src/main.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -19,10 +20,13 @@ var config = {
 
         rules: [
             {
-                test: /\.js$/,
-                exclude: /node_modules/,
+                test: /\.m?js$/,
+                exclude: /(node_modules|bower_components)/,
                 use: {
-                    loader: "babel-loader"
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
                 }
             },
             {
@@ -51,7 +55,6 @@ var config = {
 
         ]
     },
-
     plugins: [
         new MiniCssExtractPlugin({
             filename: '[name].css'
@@ -69,8 +72,7 @@ var config = {
                     autoprefixer()
                 ]
             }
-        }),
-        // "@babel/plugin-proposal-object-rest-spread"
+        })
     ]
 };
 module.exports = (env, argv) => {

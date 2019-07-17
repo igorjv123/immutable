@@ -186,3 +186,4 @@ function initUserRegistrarion() {
 
 export {initUserRegistrarion};
 
+notifyPopup('test');
