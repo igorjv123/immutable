@@ -19,6 +19,8 @@ userErrorObservable.addObserver(userErrorLoginBtnObserver);
 userErrorObservable.addObserver(userErrorAvatarObserver);
 userErrorObservable.addObserver(userErrorinfoObserver);
 
+userInfoAvatarObserver.unsubscribe()
+
 function initUser() {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {

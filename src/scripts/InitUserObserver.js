@@ -5,11 +5,12 @@ export class InitUserObservable {
 
   addObserver(observer) {
     this._observers.push(observer);
+    observer.unsubscribe = (function(){
+        const index = this._observers.indexOf(observer)
+        this._observers.splice(index,1)
+    }).bind(this)
+  }
 
-  }
-  unsubscribe(obj) {
-      this._observers = this._observers.filter(observer=>observer !== obj)
-  }
   notify(msg) {
     console.log(msg);
     this._observers.forEach((observer) => {
