@@ -5,7 +5,8 @@
     "scripts": {
         "build": "webpack --mode=production",
         "start": "webpack-dev-server --open --mode=development",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "precommit": "eslint ./src"
     },
     "description": "A basic HTML starter template for Bootstrap",
     "keywords": [
@@ -63,6 +64,7 @@
         "eslint-plugin-import": "^2.18.0",
         "file-loader": "^4.0.0",
         "firebase-tools": "^7.0.2",
+        "husky": "^3.0.0",
         "node-sass": "^4.12.0",
         "postcss-loader": "^3.0.0",
         "sass-loader": "^7.1.0",

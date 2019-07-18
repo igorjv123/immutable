@@ -1,5 +1,7 @@
+import $ from 'jquery';
 import * as firebase from 'firebase/app';
 import { InitUserObserver, InitUserObservable } from './InitUserObserver';
+
 
 const userInfoButtonObserver = new InitUserObserver(changeUserBtnLoginSuccses);
 const userInfoAvatarObserver = new InitUserObserver(changeAvatarLoginSuccses);
@@ -24,13 +26,8 @@ userInfoAvatarObserver.unsubscribe()
 function initUser() {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
-      console.log('Signed in');
-      console.dir(user);
-
       userInfoObservable.notify(user.photoURL);
     } else {
-      console.log('Already signed out');
-
       userErrorObservable.notify();
     }
     $('.user-info').addClass('show');
@@ -49,12 +46,10 @@ function changeUserInfoLoginFailed() {
   $('.user-info__sign-in').removeClass('show');
 }
 
-
 function changeUserBtnLoginSuccses() {
   $('.user-info__btn').text('Logout');
 }
 function changeAvatarLoginSuccses(url) {
-  console.log(url);
   $('.user-info__avatar').attr('src', url);
 }
 function changeUserInfoLoginSucces() {

@@ -1,5 +1,3 @@
-// import '@babel/polyfill';
-
 import './sass/style.sass';
 import * as firebase from 'firebase/app';
 
@@ -13,12 +11,10 @@ import './scripts/loginModal';
 import initUser from './scripts/initUser';
 
 import { initToggleForms } from './scripts/toggleForms';
-import { initUserLogin } from './scripts/userLogin';
-import { initUserRegistrarion } from './scripts/userRegistrarion';
+import initUserLogin from './scripts/userLogin';
+import initUserRegistrarion from './scripts/userRegistrarion';
 
 import Login from './components/login/login';
-
-msieversion();
 
 function msieversion() {
   const ua = window.navigator.userAgent;
@@ -37,6 +33,8 @@ function msieversion() {
   return false;
 }
 
+msieversion();
+
 
 window.$ = $;
 
@@ -52,24 +50,3 @@ initToggleForms();
 initUserLogin();
 initUserRegistrarion();
 initUser();
-
-function onEntry(entry) {
-  entry.forEach((change) => {
-    if (change.isIntersecting) {
-      change.target.classList.add('visible');
-    }
-  });
-}
-
-const options = {
-  threshold: [0.5],
-};
-
-const observer = new IntersectionObserver(onEntry, options);
-
-const elements = document.querySelectorAll('.lazy-load');
-
-
-for (const elm of elements) {
-  observer.observe(elm);
-}
