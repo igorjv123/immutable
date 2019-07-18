@@ -1,50 +1,50 @@
-import * as firebase from "firebase";
-import resetForm from './resetForm'
-import showCorrectErrorMsg from './loginErrors'
-import notifyPopup from './notifyPopup'
+import * as firebase from 'firebase';
+import resetForm from './resetForm';
+import showCorrectErrorMsg from './loginErrors';
+import notifyPopup from './notifyPopup';
 
 
 async function signInUser(e) {
-    e.preventDefault();
+  e.preventDefault();
 
-    const data = getSignInData();
+  const data = getSignInData();
 
-    if (data && await signIn(data.email, data.password)) {
-        resetForm();
-    }
+  if (data && await signIn(data.email, data.password)) {
+    resetForm();
+  }
 }
 
 function signIn(email, password) {
-    return firebase.auth().signInWithEmailAndPassword(email, password)
-        .then(response => {
-            notifyPopup('Hi my dear)\nYou are successfully login');
-            console.dir(response);
-            return true;
-        })
-        .catch(error => {
-            const errorCode = error.code;
+  return firebase.auth().signInWithEmailAndPassword(email, password)
+    .then((response) => {
+      notifyPopup('Hi my dear)\nYou are successfully login');
+      console.dir(response);
+      return true;
+    })
+    .catch((error) => {
+      const errorCode = error.code;
 
-            showCorrectErrorMsg(errorCode);
-            return false;
-        });
+      showCorrectErrorMsg(errorCode);
+      return false;
+    });
 }
 
 function getSignInData() {
-    const email = $("#signInEmail").val(),
-          password = $('#signInPassword').val();
+  const email = $('#signInEmail').val();
+  const password = $('#signInPassword').val();
 
-    if (email && password) {
-        return {
-            email,
-            password,
-        }
-    }
+  if (email && password) {
+    return {
+      email,
+      password,
+    };
+  }
 
-    return null;
+  return null;
 }
 
 function initUserLogin() {
-    $('.singin-form').submit(signInUser);
+  $('.singin-form').submit(signInUser);
 }
 
-export {initUserLogin};
+export { initUserLogin };

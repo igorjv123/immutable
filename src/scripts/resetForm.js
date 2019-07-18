@@ -1,9 +1,9 @@
 function resetForm() {
-    const inputs = $('.sign-form__input');
+  const inputs = $('.sign-form__input');
 
-    inputs.forEach(input => {
-        input.value = '';
-    })
+  inputs.forEach((input) => {
+    input.value = '';
+  });
 }
 
 export default resetForm;
