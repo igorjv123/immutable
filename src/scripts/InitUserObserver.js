@@ -5,8 +5,11 @@ export class InitUserObservable {
 
   addObserver(observer) {
     this._observers.push(observer);
-  }
 
+  }
+  unsubscribe(obj) {
+      this._observers = this._observers.filter(observer=>observer !== obj)
+  }
   notify(msg) {
     console.log(msg);
     this._observers.forEach((observer) => {
