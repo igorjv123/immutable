@@ -11,13 +11,13 @@ const userErrorinfoObserver = new InitUserObserver(changeUserInfoLoginFailed);
 const userInfoObservable = new InitUserObservable();
 const userErrorObservable = new InitUserObservable();
 
-userInfoObservable.addObserver(userInfoButtonObserver);
-userInfoObservable.addObserver(userInfoAvatarObserver);
-userInfoObservable.addObserver(userInfoSignInObserver);
+userInfoObservable.subscribe(userInfoButtonObserver);
+userInfoObservable.subscribe(userInfoAvatarObserver);
+userInfoObservable.subscribe(userInfoSignInObserver);
 
-userErrorObservable.addObserver(userErrorLoginBtnObserver);
-userErrorObservable.addObserver(userErrorAvatarObserver);
-userErrorObservable.addObserver(userErrorinfoObserver);
+userErrorObservable.subscribe(userErrorLoginBtnObserver);
+userErrorObservable.subscribe(userErrorAvatarObserver);
+userErrorObservable.subscribe(userErrorinfoObserver);
 
 userInfoAvatarObserver.unsubscribe()
 

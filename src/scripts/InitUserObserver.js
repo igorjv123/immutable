@@ -3,7 +3,7 @@ export class InitUserObservable {
     this._observers = [];
   }
 
-  addObserver(observer) {
+  subscribe(observer) {
     this._observers.push(observer);
     observer.unsubscribe = (function(){
         const index = this._observers.indexOf(observer)
