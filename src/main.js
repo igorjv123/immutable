@@ -50,3 +50,5 @@ initToggleForms();
 initUserLogin();
 initUserRegistrarion();
 initUser();
+
+alert(window.devicePixelRatio)

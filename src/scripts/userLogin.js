@@ -40,7 +40,6 @@ function getSignInData() {
       password,
     };
   }
-
   return null;
 }
 
