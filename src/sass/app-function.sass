@@ -4,30 +4,25 @@
 .app-function
   display: flex
   width: 100%
+  flex-direction: row
+  justify-content: flex-start
+  padding: 20px 0
 
-  &__image-wrap
-    width: 20%
-    max-width: 100px
-    @extend %align_cross_axis
+  &__icon
+    width: 60px
     margin-right: 1rem
 
   &__image
-    width: 100%
-    max-width: 60px
-    height: 100%
     object-fit: contain
 
   &__text
-    width: 100%
-    max-width: 80%
+
 
   &__header
     font-family: $open-sans
     color: $header-color
     font-size: 19px
     font-weight: 600
-    line-height: 15.28px
-
   &__description
     font-family: $open-sans
     color: $description-color

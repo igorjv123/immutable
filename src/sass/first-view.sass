@@ -7,7 +7,12 @@
 
 body
   font-family: Montserrat, Arial, Helvetica, sans-serif
-  overflow-x: hidden
+  //overflow-x: hidden
+  scroll-behavior: smooth
+  overflow-y: scroll
+
+main
+  scroll-behavior: smooth
 
 .line-after::after
   content: ''
@@ -35,6 +40,7 @@ body
   background-image: url('../assets/3130_purple_abstract.png')
   background-size: cover
   padding: 20px 50px
+
   &__content
     display: flex
     height: 100%
@@ -47,15 +53,24 @@ body
     display: flex
     justify-content: space-between
     align-items: flex-end
+    flex-direction: row
     height: 60%
     padding: 50px 20%
     flex-wrap: wrap
+
     +middle-screen
       align-items: flex-start
     +small-screen
       flex-direction: column
       justify-content: flex-start
       align-items: center
+    picture
+      display: block
+      width: 20%
+      +middle-screen
+        width: 45%
+      +small-screen
+        width: 80%
 
 .iphone-6-mockup
   display: block
@@ -69,14 +84,11 @@ body
 
 
 .services-logo
-  width: 20%
+  width: 100%
   object-fit: contain
   display: block
   position: relative
   object-fit: contain
   cursor: pointer
-  +middle-screen
-    width: 45%
-  +small-screen
-    width: 80%
+
 
