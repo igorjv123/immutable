@@ -1,26 +1,3 @@
-const isActiveFirstTab = true;
-const tabList = document.querySelectorAll('.tab-button');
-const signComponent = document.querySelector('.sign-component__inner');
-const signContent = document.querySelector('.sign-component__tab-content');
-const tabButtons = /* [...tabList].slice(), */ Array.prototype.slice.call(tabList);
-const inputsList = document.querySelectorAll('sign-form__input');
-const inputs = Array.prototype.slice.call(inputsList);
-
-
-// signComponent.addEventListener('input', ({target}) => {
-//     console.log(target)
-// });
-
-function changeTab({ target }) {
-  console.log(target);
-  const tabList = document.querySelectorAll('.tab-button');
-  const tabButtons = Array.prototype.slice.call(tabList);
-  if (target.classList.contains('tab-button')) {
-    scrollForms(tabButtons.indexOf(target));
-
-    setActiveTab(tabList, target);
-  }
-}
 
 function scrollForms(tabIndex) {
   const forms = document.querySelectorAll('.form-wrapper');
@@ -35,6 +12,17 @@ function setActiveTab(tabList, target) {
     tab.classList.remove('active');
   });
   target.classList.add('active');
+}
+
+function changeTab({ target }) {
+  console.log(target);
+  const tabList = document.querySelectorAll('.tab-button');
+  const tabButtons = Array.prototype.slice.call(tabList);
+  if (target.classList.contains('tab-button')) {
+    scrollForms(tabButtons.indexOf(target));
+
+    setActiveTab(tabList, target);
+  }
 }
 
 function initToggleForms() {

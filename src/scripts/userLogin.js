@@ -1,4 +1,5 @@
 import * as firebase from 'firebase';
+import $ from 'jquery';
 import resetForm from './resetForm';
 import showCorrectErrorMsg from './loginErrors';
 import notifyPopup from './notifyPopup';
@@ -39,7 +40,6 @@ function getSignInData() {
       password,
     };
   }
-
   return null;
 }
 
@@ -47,4 +47,4 @@ function initUserLogin() {
   $('.singin-form').submit(signInUser);
 }
 
-export { initUserLogin };
+export default initUserLogin;

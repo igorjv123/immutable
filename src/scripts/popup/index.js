@@ -4,7 +4,6 @@ class Popup {
       throw new Error(`You dont have admin rules to create this object
             Your can buy according rights by sending 50$ to admin`);
     }
-
     this.$root = $root;
   }
 

@@ -1,5 +1,7 @@
+import $ from 'jquery';
 import * as firebase from 'firebase/app';
-import {InitUserObserver, InitUserObservable} from './InitUserObserver';
+import { InitUserObserver, InitUserObservable } from './InitUserObserver';
+
 
 const userInfoButtonObserver = new InitUserObserver(changeUserBtnLoginSuccses);
 const userInfoAvatarObserver = new InitUserObserver(changeAvatarLoginSuccses);
@@ -48,6 +50,7 @@ function changeAvatarLoginFailed() {
 function changeUserInfoLoginFailed() {
     $('.user-info__sign-in').removeClass('show');
 }
+
 
 function changeUserBtnLoginSuccses() {
     $('.user-info__btn').text('Logout');

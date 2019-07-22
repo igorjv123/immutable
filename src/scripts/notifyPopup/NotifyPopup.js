@@ -4,7 +4,6 @@ import Popup from '../popup';
 class NotifyPopup extends Popup {
   constructor() {
     const $root = $('.modal-window');
-    console.log($root);
     super($root);
     this.$textElem = $('.modal-window__message');
   }
@@ -15,7 +14,6 @@ class NotifyPopup extends Popup {
   }
 
   hide({ target }) {
-    console.log(target);
     if (target.classList.contains('modal-window')
             || target.classList.contains('close')
             || target.classList.contains('close-modal')) {

@@ -7,28 +7,6 @@ const EMAIL_IN_USE = 'auth/email-already-in-use';
 const USER_NOT_FOUND = 'auth/user-not-found';
 const WEEK_PASSWORD = 'auth/weak-password';
 
-function showCorrectErrorMsg(errorCode) {
-  switch (errorCode) {
-    case WRONG_PASSWORD:
-      handleWrongPassword();
-      break;
-    case INVALID_EMAIL:
-      handleWrongEmail();
-      break;
-    case USER_NOT_FOUND:
-      createNewUser();
-      break;
-    case EMAIL_IN_USE:
-      emailIsInUse();
-      break;
-    case WEEK_PASSWORD:
-      handleWeekPassword();
-      break;
-    default:
-      notifyPopup('Something went wrong. \nPlease try again');
-  }
-}
-
 function handleWeekPassword() {
   notifyPopup('Your password is week\nPlease, select another one');
 }
@@ -55,6 +33,28 @@ function handleWrongEmail() {
 function handleWrongPassword() {
   notifyPopup('You entered wrong password');
   // TODO add error text under input
+}
+
+function showCorrectErrorMsg(errorCode) {
+  switch (errorCode) {
+    case WRONG_PASSWORD:
+      handleWrongPassword();
+      break;
+    case INVALID_EMAIL:
+      handleWrongEmail();
+      break;
+    case USER_NOT_FOUND:
+      createNewUser();
+      break;
+    case EMAIL_IN_USE:
+      emailIsInUse();
+      break;
+    case WEEK_PASSWORD:
+      handleWeekPassword();
+      break;
+    default:
+      notifyPopup('Something went wrong. \nPlease try again');
+  }
 }
 
 export default showCorrectErrorMsg;

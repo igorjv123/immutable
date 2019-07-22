@@ -4,18 +4,12 @@ import $ from 'jquery';
 import resetForm from './resetForm';
 import notifyPopup from './notifyPopup';
 import showCorrectErrorMsg from './loginErrors';
-import logout from './userSingOut';
-
-// const singUpForm = $('.signup-form');
 
 let imageUrl = null;
 
 async function singUpUser(e) {
   e.preventDefault();
-  // logout();
-  // signUpWithGoogle();
-  // singUpWithFb();
-  // return;
+
   const data = getSignUpData();
 
   if (data) {
@@ -183,6 +177,4 @@ function initUserRegistrarion() {
   $('#singUpWithGoogle').click(signUpWithGoogle);
 }
 
-export { initUserRegistrarion };
-
-// notifyPopup('test');
+export default initUserRegistrarion;
