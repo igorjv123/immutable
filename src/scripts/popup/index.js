@@ -1,12 +1,12 @@
 class Popup {
   constructor($root) {
-    if (new.target === Popup) {
-      throw new Error(`You dont have admin rules to create this object
-            Your can buy according rights by sending 50$ to admin`);
-    }
+    // if (new.target === Popup) {
+    //   throw new Error(`You dont have admin rules to create this object
+    //         Your can buy according rights by sending 50$ to admin`);
+    // }
     this.$root = $root;
   }
-
+  // додаєм обработчик на корінь
   init() {
     // const registrationComponent = document.querySelector('.sign-component');
     this.$root.click(this.hide.bind(this));

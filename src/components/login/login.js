@@ -1,7 +1,10 @@
 import pugHtml from './login.pug';
-
+import $ from 'jquery';
 import Popup from '../../scripts/popup';
-
+//
+// function pugHtml() {
+//   return `<div></div>`;
+// }
 class Login extends Popup {
   constructor() {
     const pug = pugHtml();

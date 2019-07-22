@@ -5,10 +5,10 @@ export class InitUserObservable {
 
   subscribe(observer) {
     this._observers.push(observer);
-    observer.unsubscribe = (function(){
+    observer.unsubscribe = (() => {
         const index = this._observers.indexOf(observer)
         this._observers.splice(index,1)
-    }).bind(this)
+    })
   }
 
   notify(msg) {
